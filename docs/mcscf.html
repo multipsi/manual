@@ -93,8 +93,8 @@
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
-   Welcome to your Jupyter Book
+  <a class="reference internal" href="intro.html">
+   MultiPsi manual
   </a>
  </li>
 </ul>
@@ -286,7 +286,7 @@
 <h2>CASSCF<a class="headerlink" href="#casscf" title="Permalink to this headline">¶</a></h2>
 <p>The most commonly used form of MCSCF nowadays is the complete active space self-consistent field (CASSCF), which is a form of MCSCF where the configurations are generated from a full CI expansion within an active space consisting of a few orbitals. Because of the factorial growth of full CI with the number of active orbitals, the active space should usually be limited to less than 20 electrons in 20 orbitals, with the current record being a CAS(22,22) on the triplet state of hydrogenase. However, this large calculation was only possible on a large cluster using the entire distributed memory available.</p>
 <p>To define a CASSCF, we simply need to define our OrbSpace as a full CI expansion (see previous chapters) and provide it to our MCSCF module. For example, we can start with a simple Hartree-Fock, here for furan:</p>
-<div class="cell docutils container">
+<div class="cell tag_output_scroll docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">veloxchem</span> <span class="k">as</span> <span class="nn">vlx</span>
 <span class="kn">import</span> <span class="nn">multipsi</span> <span class="k">as</span> <span class="nn">mtp</span>
@@ -470,7 +470,7 @@
 </div>
 </div>
 <p>Then we choose all <span class="math notranslate nohighlight">\(\pi\)</span> orbitals (so 5 orbitals total with 6 electrons):</p>
-<div class="cell docutils container">
+<div class="cell tag_output_scroll docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">space</span><span class="o">=</span><span class="n">mtp</span><span class="o">.</span><span class="n">OrbSpace</span><span class="p">(</span><span class="n">molecule</span><span class="p">,</span><span class="n">scfdrv</span><span class="o">.</span><span class="n">mol_orbs</span><span class="p">)</span>
 <span class="n">space</span><span class="o">.</span><span class="n">CAS</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
@@ -652,7 +652,7 @@ viewergrid_1645700779514095[0][0].render();
 </div>
 <p>We can see that we got 3 <span class="math notranslate nohighlight">\(\pi\)</span> orbitals correctly, but 2 were not. By default, when only specifying the number of electrons and orbitals like we did here, the program chooses those around the HOMO-LUMO gap. While it is sometimes fine, most often the orbitals we want are not those, and we thus need to resort to visual inspection.</p>
 <p>In this case, it is simple to just look at the MO coefficients. Indeed, the <span class="math notranslate nohighlight">\(\pi\)</span> orbitals have a different symmetry than the <span class="math notranslate nohighlight">\(\sigma\)</span> and thus show in the coefficients. Here, the p0 orbitals are those forming the <span class="math notranslate nohighlight">\(\pi\)</span> system.</p>
-<div class="cell docutils container">
+<div class="cell tag_output_scroll docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">space</span><span class="o">.</span><span class="n">molorb</span><span class="o">.</span><span class="n">print_orbitals</span><span class="p">(</span><span class="n">molecule</span><span class="p">,</span><span class="n">basis</span><span class="p">,</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
@@ -1447,7 +1447,7 @@ viewergrid_1645700779514095[0][0].render();
 </div>
 </div>
 <p>We can thus recognize that the orbitals we want are 12, 17, 18, 19 and 21. We can specify them using the CASOrb keyword, which both defines a CAS expansion and allows to select the active orbitals:</p>
-<div class="cell docutils container">
+<div class="cell tag_output_scroll docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">space</span><span class="o">.</span><span class="n">CASOrb</span><span class="p">([</span><span class="mi">11</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="mi">20</span><span class="p">])</span>
 <span class="n">mcscfdrv</span><span class="o">=</span><span class="n">mtp</span><span class="o">.</span><span class="n">McscfDriver</span><span class="p">(</span><span class="n">molecule</span><span class="p">,</span><span class="n">basis</span><span class="p">,</span><span class="n">space</span><span class="p">)</span>
@@ -1570,7 +1570,7 @@ viewergrid_1645700793329765[0][0].render();
 <div class="section" id="state-specific-and-state-averaged-casscf">
 <h2>State-specific and state-averaged CASSCF<a class="headerlink" href="#state-specific-and-state-averaged-casscf" title="Permalink to this headline">¶</a></h2>
 <p>When one is interested in more than just the ground state, for example in spectroscopy or photochemistry, we can specify this in the mcscf driver:</p>
-<div class="cell docutils container">
+<div class="cell tag_output_scroll docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nstates</span><span class="o">=</span><span class="mi">3</span>
 <span class="n">mcscfdrv</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">nstates</span><span class="p">)</span>
@@ -1636,7 +1636,7 @@ Total MCSCF time: 00:00:02
 </div>
 <p>By default, the program then uses a state-averaged optimisation. This means the orbitals are found to minimize the average of all the selected states (here 3). By doing so, we obtain a compromise and all states are treated at a similar accuracy, favouring energy cancellation in the energy differences (i.e. excitation energies). On the other hand, the orbitals are not optimal for any specific state, and here we can see for example that the ground state energy is slightly higher than the one found in the previous section.</p>
 <p>Alternatively, one can decide to optimize the orbitals for a specific state, or biasing the average for a specific state. For this, we use the state-average optimizer but with custom weights instead of the default equal weights:</p>
-<div class="cell docutils container">
+<div class="cell tag_output_scroll docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mcscfdrv</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">nstates</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
