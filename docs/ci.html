@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -33,19 +33,19 @@
     
   <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -89,7 +89,7 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Sök i den här boken ..." aria-label="Sök i den här boken ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
@@ -99,7 +99,7 @@
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Getting started
  </span>
@@ -111,9 +111,9 @@
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
-  Tutorials
+  Basic tutorials
  </span>
 </p>
 <ul class="current nav bd-sidenav">
@@ -125,6 +125,18 @@
  <li class="toctree-l1">
   <a class="reference internal" href="mcscf.html">
    MCSCF
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Advanced tutorials
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="active-space.html">
+   Selecting an active space
   </a>
  </li>
 </ul>
@@ -152,8 +164,8 @@
             
             <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
                 data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Växla navigering" aria-controls="site-navigation"
-                title="Växla navigering" data-toggle="tooltip" data-placement="left">
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
                 <i class="fas fa-bars"></i>
                 <i class="fas fa-arrow-left"></i>
                 <i class="fas fa-arrow-up"></i>
@@ -161,7 +173,7 @@
             
             
 <div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Ladda ner den här sidan"><i
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
 
     <div class="dropdown-buttons">
@@ -169,10 +181,10 @@
         
         <!-- Download raw file -->
         <a class="dropdown-buttons" href="../_sources/docs/ci.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Ladda ner källfil" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Skriv ut till PDF"
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
@@ -185,12 +197,12 @@
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
             href="https://github.com/MGDelcey/mtpman"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Källförvar"><i
-                    class="fab fa-github"></i>förvar</button></a>
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
             href="https://github.com/MGDelcey/mtpman/issues/new?title=Issue%20on%20page%20%2Fdocs/ci.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Öppna ett problem"><i class="fas fa-lightbulb"></i>öppet problem</button></a>
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
     </div>
 </div>
@@ -198,8 +210,8 @@
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullskärmsläge"
-        title="Fullskärmsläge"><i
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
@@ -210,7 +222,7 @@
     <div class="dropdown-buttons">
         
         <a class="binder-button" href="https://mybinder.org/v2/gh/MGDelcey/mtpman/master?urlpath=tree/docs/docs/ci.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Lansera Binder" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
@@ -227,7 +239,7 @@
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Innehåll
+                <i class="fas fa-list"></i> Contents
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
@@ -257,7 +269,7 @@
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> Innehåll </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -280,7 +292,7 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="configuration-interaction">
+  <div class="section" id="configuration-interaction">
 <h1>Configuration interaction<a class="headerlink" href="#configuration-interaction" title="Permalink to this headline">¶</a></h1>
 <p>Multipsi provides a very general configuration code, allowing a wide variety of CI expansions, including FullCI and truncated CI (for example CI with single and double excitations CISD). Note however that the code is mostly designed around Full CI (for use in particular in complete active space CAS methods, see following chapters) and is thus not as efficient as a dedicated CIS or CISD code.</p>
 <div class="section" id="full-ci">
@@ -309,7 +321,7 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Warning * Environment variable OMP_NUM_THREADS not set.
-* Warning * Setting OMP_NUM_THREADS to 16.
+* Warning * Setting OMP_NUM_THREADS to 4.
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
@@ -346,7 +358,7 @@
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Info * Starting Reduced Basis SCF calculation...                                                                        
-* Info * ...done. SCF energy in reduced basis set: -75.641519996755 a.u. Time: 0.02 sec.                                  
+* Info * ...done. SCF energy in reduced basis set: -75.641519996755 a.u. Time: 0.04 sec.                                  
                                                                                                                           
 </pre></div>
 </div>
@@ -381,7 +393,7 @@
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
-               *** SCF converged in 5 iterations. Time: 0.01 sec.                                                         
+               *** SCF converged in 5 iterations. Time: 0.03 sec.                                                         
                                                                                                                           
 </pre></div>
 </div>
@@ -434,9 +446,9 @@
                Molecular Orbital No.   6:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.000 Energy:   -0.00093 a.u.                                                                  
-               (   1 O   3s  :    -0.23) (   1 O   1p0 :    -0.41) (   1 O   2p0 :    -0.43)                              
-               (   2 H   1s  :     0.17) (   2 H   2s  :     0.51) (   3 H   1s  :     0.17)                              
-               (   3 H   2s  :     0.51)                                                                                  
+               (   1 O   3s  :     0.23) (   1 O   1p0 :     0.41) (   1 O   2p0 :     0.43)                              
+               (   2 H   1s  :    -0.17) (   2 H   2s  :    -0.51) (   3 H   1s  :    -0.17)                              
+               (   3 H   2s  :    -0.51)                                                                                  
                                                                                                                           
                Molecular Orbital No.   7:                                                                                 
                --------------------------                                                                                 
@@ -600,7 +612,7 @@ Number of determinants:      122760
         -------------
                                                                                                                           
 * State 1
-- Energy: -75.90215524152768
+- Energy: -75.90215524152771
 - S^2   : 0.00  (multiplicity = 1.0 )
 - Natural orbitals
 1.98787 1.98052 1.72827 1.69442 0.30428 0.26591 0.01798 0.00977 0.00528 0.00509 0.00035 0.00026
@@ -683,19 +695,19 @@ Number of determinants:      122760
         -------------
                                                                                                                           
 * State 1
-- Energy: -75.90215524245836
+- Energy: -75.90215524245828
 - S^2   : 0.00  (multiplicity = 1.0 )
 - Natural orbitals
 1.98787 1.98052 1.72828 1.69443 0.30427 0.26590 0.01798 0.00977 0.00528 0.00509 0.00035 0.00026
                                                                                                                           
 * State 2
-- Energy: -75.84903068223844
+- Energy: -75.84903068223842
 - S^2   : 0.00  (multiplicity = 1.0 )
 - Natural orbitals
 1.98897 0.99427 1.68096 1.95900 1.00328 0.33528 0.00674 0.00894 0.01568 0.00573 0.00093 0.00022
                                                                                                                           
 * State 3
-- Energy: -75.82562767830423
+- Energy: -75.82562767830412
 - S^2   : 0.00  (multiplicity = 1.0 )
 - Natural orbitals
 1.98928 0.99437 1.94571 1.62697 0.40629 1.00029 0.00666 0.00925 0.00601 0.01415 0.00027 0.00075
@@ -714,8 +726,8 @@ Number of determinants:      122760
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ground state energy: -75.90215524245836
-Array of all state energies: [-75.90215524245836, -75.84903068223844, -75.82562767830423]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ground state energy: -75.90215524245828
+Array of all state energies: [-75.90215524245828, -75.84903068223842, -75.82562767830412]
 
 Ground state natural orbitals occupation numbers: [1.98787204e+00 1.98051728e+00 1.72827832e+00 1.69442749e+00
  3.04273735e-01 2.65895102e-01 1.79768537e-02 9.76908009e-03
@@ -794,7 +806,7 @@ Number of determinants:      729
         -------------
                                                                                                                           
 * State 1
-- Energy: -75.86092709655227
+- Energy: -75.86092709655236
 - S^2   : -0.00  (multiplicity = 1.0 )
 - Natural orbitals
 1.99082 1.98675 1.83937 1.82537 0.17488 0.15640 0.01214 0.00702 0.00338 0.00336 0.00028 0.00024
@@ -851,9 +863,9 @@ Number of determinants:      729
     <footer class="footer">
   <p>
     
-      Förbi The MultiPsi developers<br/>
+      By The MultiPsi developers<br/>
     
-        &copy; upphovsrätt 2021.<br/>
+        &copy; Copyright 2021.<br/>
   </p>
 </footer>
 </main>
