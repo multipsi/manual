@@ -7,12 +7,14 @@ parts:
 - caption: Getting started
   chapters:
   - file: docs/install
-- caption: Tutorials
+- caption: Basic tutorials
   chapters:
   - file: docs/ci
   - file: docs/mcscf
-  - file: docs/active-space
   - file: docs/properties
+- caption: Advanced tutorials
+  chapters:
+  - file: docs/active-space
 - caption: Classes
   chapters:
   - file: docs/orbspace
