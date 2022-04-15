@@ -1,0 +1,1265 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Molecular properties &#8212; MultiPsi manual</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Selecting an active space" href="active-space.html" />
+    <link rel="prev" title="MCSCF" href="mcscf.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">MultiPsi manual</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   MultiPsi manual
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Getting started
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="install.html">
+   Installing the program
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Basic tutorials
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="ci.html">
+   Configuration interaction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mcscf.html">
+   MCSCF
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Molecular properties
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Advanced tutorials
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="active-space.html">
+   Selecting an active space
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/docs/properties.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/MGDelcey/mtpman"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/MGDelcey/mtpman/issues/new?title=Issue%20on%20page%20%2Fdocs/properties.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/MGDelcey/mtpman/master?urlpath=tree/docs/docs/properties.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#structure-optimization">
+   Structure optimization
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spectroscopy">
+   Spectroscopy
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Molecular properties</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#structure-optimization">
+   Structure optimization
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spectroscopy">
+   Spectroscopy
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="molecular-properties">
+<h1>Molecular properties<a class="headerlink" href="#molecular-properties" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="structure-optimization">
+<h2>Structure optimization<a class="headerlink" href="#structure-optimization" title="Permalink to this headline">¶</a></h2>
+<p>One of the most commonly calculated properties in theoretical chemistry is the molecular structure. It is quite common to use structures calculated at a cheaper level of theory, typically DFT, as a starting point since ground state energies are relatively insensitive to the geometry. However, in some cases, especially when strong correlation is significant, one may want to use MCSCF structures instead.</p>
+<p>The workflow here is very similar to that of VeloxChem, namely first defining the Gradient Driver, and then give it to the optimizer, which itself is based on GeomeTRIC. The MCSCF gradient driver will automatically choose analytical gradients if available for the specific type of MCSCF calculation performed, numerical gradients otherwise.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Currently, derivative integrals are not available and all gradients are therefore numerical. This should change very soon.</p>
+</div>
+<p>Let’s illustrate this on a simple O<span class="math notranslate nohighlight">\(_2\)</span> molecule. First, we compute one MCSCF with the <span class="math notranslate nohighlight">\(\pi\)</span> orbitals in the active space.</p>
+<div class="cell tag_output_scroll docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">veloxchem</span> <span class="k">as</span> <span class="nn">vlx</span>
+<span class="kn">import</span> <span class="nn">multipsi</span> <span class="k">as</span> <span class="nn">mtp</span>
+
+<span class="n">O2_xyz</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;2</span>
+
+<span class="s2">O 0.0 0.0 -0.6</span>
+<span class="s2">O 0.0 0.0  0.6</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">molecule</span><span class="o">=</span><span class="n">vlx</span><span class="o">.</span><span class="n">Molecule</span><span class="o">.</span><span class="n">from_xyz_string</span><span class="p">(</span><span class="n">O2_xyz</span><span class="p">)</span>
+<span class="n">molecule</span><span class="o">.</span><span class="n">set_multiplicity</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">basis</span> <span class="o">=</span> <span class="n">vlx</span><span class="o">.</span><span class="n">MolecularBasis</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">molecule</span><span class="p">,</span><span class="s2">&quot;cc-pvdz&quot;</span><span class="p">)</span>
+
+<span class="n">scfdrv</span> <span class="o">=</span> <span class="n">vlx</span><span class="o">.</span><span class="n">ScfUnrestrictedDriver</span><span class="p">()</span>
+<span class="n">scfdrv</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">molecule</span><span class="p">,</span> <span class="n">basis</span><span class="p">)</span>
+<span class="n">uhf_orbs</span> <span class="o">=</span> <span class="n">scfdrv</span><span class="o">.</span><span class="n">natural_orbitals</span><span class="p">()</span>
+
+<span class="n">space</span><span class="o">=</span><span class="n">mtp</span><span class="o">.</span><span class="n">OrbSpace</span><span class="p">(</span><span class="n">molecule</span><span class="p">,</span><span class="n">uhf_orbs</span><span class="p">)</span>
+<span class="n">space</span><span class="o">.</span><span class="n">CAS</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">mcscfdrv</span><span class="o">=</span><span class="n">mtp</span><span class="o">.</span><span class="n">McscfDriver</span><span class="p">()</span>
+<span class="n">mcscfdrv</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">molecule</span><span class="p">,</span><span class="n">basis</span><span class="p">,</span><span class="n">space</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Warning * Environment variable OMP_NUM_THREADS not set.
+* Warning * Setting OMP_NUM_THREADS to 4.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
+                                            Self Consistent Field Driver Setup                                            
+                                           ====================================                                           
+                                                                                                                          
+                   Wave Function Model             : Spin-Unrestricted Hartree-Fock                                       
+                   Initial Guess Model             : Superposition of Atomic Densities                                    
+                   Convergence Accelerator         : Two Level Direct Inversion of Iterative Subspace                     
+                   Max. Number of Iterations       : 50                                                                   
+                   Max. Number of Error Vectors    : 10                                                                   
+                   Convergence Threshold           : 1.0e-06                                                              
+                   ERI Screening Scheme            : Cauchy Schwarz + Density                                             
+                   ERI Screening Mode              : Dynamic                                                              
+                   ERI Screening Threshold         : 1.0e-12                                                              
+                   Linear Dependence Threshold     : 1.0e-06                                                              
+                                                                                                                          
+* Info * Nuclear repulsion energy: 28.2227845815 a.u.                                                                     
+                                                                                                                          
+* Info * Overlap matrix computed in 0.00 sec.                                                                             
+                                                                                                                          
+* Info * Kinetic energy matrix computed in 0.00 sec.                                                                      
+                                                                                                                          
+* Info * Nuclear potential matrix computed in 0.00 sec.                                                                   
+                                                                                                                          
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Info * Orthogonalization matrix computed in 0.00 sec.                                                                   
+                                                                                                                          
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Info * SAD initial guess computed in 0.00 sec.                                                                          
+                                                                                                                          
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Info * Starting Reduced Basis SCF calculation...                                                                        
+* Info * ...done. SCF energy in reduced basis set: -149.560614348825 a.u. Time: 0.12 sec.                                 
+                                                                                                                          
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Info * Overlap matrix computed in 0.00 sec.                                                                             
+                                                                                                                          
+* Info * Kinetic energy matrix computed in 0.00 sec.                                                                      
+                                                                                                                          
+* Info * Nuclear potential matrix computed in 0.00 sec.                                                                   
+                                                                                                                          
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Info * Orthogonalization matrix computed in 0.00 sec.                                                                   
+                                                                                                                          
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
+               Iter. | Hartree-Fock Energy | Energy Change | Gradient Norm | Max. Gradient | Density Change               
+               --------------------------------------------------------------------------------------------               
+                  1      -149.626803052902    0.0000000000      0.14017320      0.02769549      0.00000000                
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  2      -149.628831998606   -0.0020289457      0.03740027      0.00684115      0.04605541                
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  3      -149.628984003128   -0.0001520045      0.00782897      0.00108779      0.01270091                
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  4      -149.628991892029   -0.0000078889      0.00167006      0.00032454      0.00308450                
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  5      -149.628992297667   -0.0000004056      0.00027796      0.00004989      0.00071931                
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  6      -149.628992313425   -0.0000000158      0.00005776      0.00001136      0.00015635                
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  7      -149.628992314158   -0.0000000007      0.00000596      0.00000098      0.00003463                
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  8      -149.628992314164   -0.0000000000      0.00000047      0.00000009      0.00000254                
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
+               *** SCF converged in 8 iterations. Time: 0.97 sec.                                                         
+                                                                                                                          
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>               Spin-Unrestricted Hartree-Fock:                                                                            
+               -------------------------------                                                                            
+               Total Energy                       :     -149.6289923142 a.u.                                              
+               Electronic Energy                  :     -177.8517768957 a.u.                                              
+               Nuclear Repulsion Energy           :       28.2227845815 a.u.                                              
+               ------------------------------------                                                                       
+               Gradient Norm                      :        0.0000004670 a.u.                                              
+                                                                                                                          
+                                                                                                                          
+               Ground State Information                                                                                   
+               ------------------------                                                                                   
+               Charge of Molecule            :  0.0                                                                       
+               Magnetic Quantum Number (M_S) :  1.0                                                                       
+               Expectation value of S**2     :  2.0326                                                                    
+                                                                                                                          
+                                                                                                                          
+                                             Spin Unrestricted Alpha Orbitals                                             
+                                             --------------------------------                                             
+                                                                                                                          
+               Molecular Orbital No.   5:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 1.000 Energy:   -0.84003 a.u.                                                                  
+               (   1 O   1p-1:    -0.48) (   1 O   2p-1:    -0.25) (   2 O   1p-1:    -0.48)                              
+               (   2 O   2p-1:    -0.25)                                                                                  
+                                                                                                                          
+               Molecular Orbital No.   6:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 1.000 Energy:   -0.84003 a.u.                                                                  
+               (   1 O   1p+1:     0.48) (   1 O   2p+1:     0.25) (   2 O   1p+1:     0.48)                              
+               (   2 O   2p+1:     0.25)                                                                                  
+                                                                                                                          
+               Molecular Orbital No.   7:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 1.000 Energy:   -0.76026 a.u.                                                                  
+               (   1 O   3s  :    -0.25) (   1 O   1p0 :     0.47) (   1 O   2p0 :     0.24)                              
+               (   2 O   3s  :    -0.25) (   2 O   1p0 :    -0.47) (   2 O   2p0 :    -0.24)                              
+                                                                                                                          
+               Molecular Orbital No.   8:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 1.000 Energy:   -0.54609 a.u.                                                                  
+               (   1 O   1p-1:     0.54) (   1 O   2p-1:     0.38) (   2 O   1p-1:    -0.54)                              
+               (   2 O   2p-1:    -0.38)                                                                                  
+                                                                                                                          
+               Molecular Orbital No.   9:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 1.000 Energy:   -0.54609 a.u.                                                                  
+               (   1 O   1p+1:     0.54) (   1 O   2p+1:     0.38) (   2 O   1p+1:    -0.54)                              
+               (   2 O   2p+1:    -0.38)                                                                                  
+                                                                                                                          
+               Molecular Orbital No.  10:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 0.000 Energy:    0.43760 a.u.                                                                  
+               (   1 O   2s  :     0.18) (   1 O   3s  :     1.21) (   1 O   1p0 :     0.42)                              
+               (   1 O   2p0 :     1.18) (   2 O   2s  :    -0.18) (   2 O   3s  :    -1.21)                              
+               (   2 O   1p0 :     0.42) (   2 O   2p0 :     1.18)                                                        
+                                                                                                                          
+               Molecular Orbital No.  11:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 0.000 Energy:    1.05429 a.u.                                                                  
+               (   1 O   1p+1:     0.50) (   1 O   1p-1:     0.43) (   1 O   2p+1:    -0.48)                              
+               (   1 O   2p-1:    -0.42) (   2 O   1p+1:     0.50) (   2 O   1p-1:     0.43)                              
+               (   2 O   2p+1:    -0.48) (   2 O   2p-1:    -0.42)                                                        
+                                                                                                                          
+               Molecular Orbital No.  12:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 0.000 Energy:    1.05429 a.u.                                                                  
+               (   1 O   1p+1:     0.43) (   1 O   1p-1:    -0.50) (   1 O   2p+1:    -0.42)                              
+               (   1 O   2p-1:     0.48) (   2 O   1p+1:     0.43) (   2 O   1p-1:    -0.50)                              
+               (   2 O   2p+1:    -0.42) (   2 O   2p-1:     0.48)                                                        
+                                                                                                                          
+               Molecular Orbital No.  13:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 0.000 Energy:    1.06856 a.u.                                                                  
+               (   1 O   3s  :     1.01) (   1 O   1p0 :    -0.70) (   1 O   2p0 :     1.35)                              
+               (   2 O   3s  :    -1.01) (   2 O   1p0 :    -0.70) (   2 O   2p0 :     1.35)                              
+                                                                                                                          
+               Molecular Orbital No.  14:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 0.000 Energy:    1.14174 a.u.                                                                  
+               (   1 O   3s  :    -0.34) (   1 O   1p0 :    -0.58) (   1 O   2p0 :     0.82)                              
+               (   2 O   3s  :    -0.34) (   2 O   1p0 :     0.58) (   2 O   2p0 :    -0.82)                              
+                                                                                                                          
+                                             Spin Unrestricted Beta Orbitals                                              
+                                             -------------------------------                                              
+                                                                                                                          
+               Molecular Orbital No.   3:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 1.000 Energy:   -1.59466 a.u.                                                                  
+               (   1 O   2s  :    -0.32) (   1 O   3s  :    -0.27) (   1 O   1p0 :    -0.17)                              
+               (   2 O   2s  :    -0.32) (   2 O   3s  :    -0.27) (   2 O   1p0 :     0.17)                              
+                                                                                                                          
+               Molecular Orbital No.   4:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 1.000 Energy:   -0.99170 a.u.                                                                  
+               (   1 O   2s  :    -0.34) (   1 O   3s  :    -0.44) (   1 O   1p0 :     0.16)                              
+               (   2 O   2s  :     0.34) (   2 O   3s  :     0.44) (   2 O   1p0 :     0.16)                              
+                                                                                                                          
+               Molecular Orbital No.   5:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 1.000 Energy:   -0.69893 a.u.                                                                  
+               (   1 O   3s  :     0.28) (   1 O   1p0 :    -0.46) (   1 O   2p0 :    -0.25)                              
+               (   2 O   3s  :     0.28) (   2 O   1p0 :     0.46) (   2 O   2p0 :     0.25)                              
+                                                                                                                          
+               Molecular Orbital No.   6:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 1.000 Energy:   -0.57596 a.u.                                                                  
+               (   1 O   1p+1:    -0.19) (   1 O   1p-1:    -0.36) (   1 O   2p+1:    -0.15)                              
+               (   1 O   2p-1:    -0.28) (   2 O   1p+1:    -0.19) (   2 O   1p-1:    -0.36)                              
+               (   2 O   2p+1:    -0.15) (   2 O   2p-1:    -0.28)                                                        
+                                                                                                                          
+               Molecular Orbital No.   7:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 1.000 Energy:   -0.57596 a.u.                                                                  
+               (   1 O   1p+1:    -0.36) (   1 O   1p-1:     0.19) (   1 O   2p+1:    -0.28)                              
+               (   1 O   2p-1:     0.15) (   2 O   1p+1:    -0.36) (   2 O   1p-1:     0.19)                              
+               (   2 O   2p+1:    -0.28) (   2 O   2p-1:     0.15)                                                        
+                                                                                                                          
+               Molecular Orbital No.   8:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 0.000 Energy:    0.11835 a.u.                                                                  
+               (   1 O   1p+1:    -0.43) (   1 O   2p+1:    -0.52) (   2 O   1p+1:     0.43)                              
+               (   2 O   2p+1:     0.52)                                                                                  
+                                                                                                                          
+               Molecular Orbital No.   9:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 0.000 Energy:    0.11835 a.u.                                                                  
+               (   1 O   1p-1:     0.43) (   1 O   2p-1:     0.52) (   2 O   1p-1:    -0.43)                              
+               (   2 O   2p-1:    -0.52)                                                                                  
+                                                                                                                          
+               Molecular Orbital No.  10:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 0.000 Energy:    0.51444 a.u.                                                                  
+               (   1 O   2s  :     0.19) (   1 O   3s  :     1.36) (   1 O   1p0 :     0.38)                              
+               (   1 O   2p0 :     1.28) (   2 O   2s  :    -0.19) (   2 O   3s  :    -1.36)                              
+               (   2 O   1p0 :     0.38) (   2 O   2p0 :     1.28)                                                        
+                                                                                                                          
+               Molecular Orbital No.  11:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 0.000 Energy:    1.09957 a.u.                                                                  
+               (   1 O   3s  :     0.97) (   1 O   1p0 :    -0.71) (   1 O   2p0 :     1.30)                              
+               (   2 O   3s  :    -0.97) (   2 O   1p0 :    -0.71) (   2 O   2p0 :     1.30)                              
+                                                                                                                          
+               Molecular Orbital No.  12:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 0.000 Energy:    1.15965 a.u.                                                                  
+               (   1 O   3s  :     0.23) (   1 O   1p0 :     0.59) (   1 O   2p0 :    -0.82)                              
+               (   2 O   3s  :     0.23) (   2 O   1p0 :    -0.59) (   2 O   2p0 :     0.82)                              
+                                                                                                                          
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>          Active space definition:
+          ------------------------
+Number of inactive (occupied) orbitals: 5
+Number of active orbitals:              4
+Number of virtual orbitals:             19
+
+    This is a CASSCF wavefunction: CAS(6,4)
+
+          CI expansion:
+          -------------
+Number of determinants:      6
+
+
+                                                                                                                          
+        MCSCF Iterations
+        ----------------
+                                                                                                                          
+     Iter. | Average Energy | E. Change | Grad. Norm | CI Iter. |   Time
+     ---------------------------------------------------------------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        1     -149.645938143     0.0e+00      5.7e-02          1   0:00:00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        2     -149.646689203    -7.5e-04      1.7e-02          1   0:00:00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        3     -149.646744724    -5.6e-05      3.3e-03          1   0:00:00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        4     -149.646745627    -9.0e-07      4.8e-04          1   0:00:00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        5     -149.646745651    -2.4e-08      8.3e-05          1   0:00:00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        6     -149.646745652    -8.8e-10      1.8e-05          1   0:00:00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
+** Convergence reached in 6 iterations
+                                                                                                                          
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        Final results
+        -------------
+                                                                                                                          
+* State 1
+- Energy: -149.64674565160362
+- S^2   : 2.00  (multiplicity = 3.0 )
+- Natural orbitals
+1.94748 1.94748 1.05252 1.05252
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
+                                                 Spin Restricted Orbitals                                                 
+                                                 ------------------------                                                 
+                                                                                                                          
+               Molecular Orbital No.   4:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 2.000 Energy:   -1.08903 a.u.                                                                  
+               (   1 O   2s  :     0.36) (   1 O   3s  :     0.46) (   2 O   2s  :    -0.36)                              
+               (   2 O   3s  :    -0.46)                                                                                  
+                                                                                                                          
+               Molecular Orbital No.   5:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 2.000 Energy:   -0.72394 a.u.                                                                  
+               (   1 O   3s  :     0.27) (   1 O   1p0 :    -0.46) (   1 O   2p0 :    -0.24)                              
+               (   2 O   3s  :     0.27) (   2 O   1p0 :     0.46) (   2 O   2p0 :     0.24)                              
+                                                                                                                          
+               Molecular Orbital No.   6:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 1.947 Energy:   -0.70369 a.u.                                                                  
+               (   1 O   1p+1:    -0.35) (   1 O   1p-1:    -0.28) (   1 O   2p+1:    -0.22)                              
+               (   1 O   2p-1:    -0.17) (   2 O   1p+1:    -0.35) (   2 O   1p-1:    -0.28)                              
+               (   2 O   2p+1:    -0.22) (   2 O   2p-1:    -0.17)                                                        
+                                                                                                                          
+               Molecular Orbital No.   7:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 1.947 Energy:   -0.70369 a.u.                                                                  
+               (   1 O   1p+1:    -0.28) (   1 O   1p-1:     0.35) (   1 O   2p+1:    -0.17)                              
+               (   1 O   2p-1:     0.22) (   2 O   1p+1:    -0.28) (   2 O   1p-1:     0.35)                              
+               (   2 O   2p+1:    -0.17) (   2 O   2p-1:     0.22)                                                        
+                                                                                                                          
+               Molecular Orbital No.   8:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 1.053 Energy:   -0.28498 a.u.                                                                  
+               (   1 O   1p+1:    -0.23) (   1 O   1p-1:     0.48) (   1 O   2p+1:    -0.17)                              
+               (   1 O   2p-1:     0.36) (   2 O   1p+1:     0.23) (   2 O   1p-1:    -0.48)                              
+               (   2 O   2p+1:     0.17) (   2 O   2p-1:    -0.36)                                                        
+                                                                                                                          
+               Molecular Orbital No.   9:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 1.053 Energy:   -0.28498 a.u.                                                                  
+               (   1 O   1p+1:    -0.48) (   1 O   1p-1:    -0.23) (   1 O   2p+1:    -0.36)                              
+               (   1 O   2p-1:    -0.17) (   2 O   1p+1:     0.48) (   2 O   1p-1:     0.23)                              
+               (   2 O   2p+1:     0.36) (   2 O   2p-1:     0.17)                                                        
+                                                                                                                          
+               Molecular Orbital No.  10:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 0.000 Energy:    0.47782 a.u.                                                                  
+               (   1 O   2s  :    -0.18) (   1 O   3s  :    -1.29) (   1 O   1p0 :    -0.40)                              
+               (   1 O   2p0 :    -1.23) (   2 O   2s  :     0.18) (   2 O   3s  :     1.29)                              
+               (   2 O   1p0 :    -0.40) (   2 O   2p0 :    -1.23)                                                        
+                                                                                                                          
+               Molecular Orbital No.  11:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 0.000 Energy:    1.08939 a.u.                                                                  
+               (   1 O   3s  :    -0.99) (   1 O   1p0 :     0.71) (   1 O   2p0 :    -1.32)                              
+               (   2 O   3s  :     0.99) (   2 O   1p0 :     0.71) (   2 O   2p0 :    -1.32)                              
+                                                                                                                          
+               Molecular Orbital No.  12:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 0.000 Energy:    1.11262 a.u.                                                                  
+               (   1 O   1p+1:    -0.66) (   1 O   2p+1:     0.61) (   2 O   1p+1:    -0.66)                              
+               (   2 O   2p+1:     0.61)                                                                                  
+                                                                                                                          
+               Molecular Orbital No.  13:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 0.000 Energy:    1.11262 a.u.                                                                  
+               (   1 O   1p-1:     0.66) (   1 O   2p-1:    -0.61) (   2 O   1p-1:     0.66)                              
+               (   2 O   2p-1:    -0.61)                                                                                  
+                                                                                                                          
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
+Total MCSCF time: 00:00:00
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, we optimize the molecule.</p>
+<div class="cell tag_output_scroll docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">GradDrv</span><span class="o">=</span><span class="n">mtp</span><span class="o">.</span><span class="n">McscfGradientDriver</span><span class="p">(</span><span class="n">mcscfdrv</span><span class="p">)</span>
+<span class="n">opt_drv</span> <span class="o">=</span> <span class="n">vlx</span><span class="o">.</span><span class="n">OptimizationDriver</span><span class="p">(</span><span class="n">GradDrv</span><span class="p">)</span>
+<span class="n">casscf_opt_geom</span> <span class="o">=</span> <span class="n">opt_drv</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">molecule</span><span class="p">,</span> <span class="n">basis</span><span class="p">,</span> <span class="n">space</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
+                                                Optimization Driver Setup                                                 
+                                               ===========================                                                
+                                                                                                                          
+                                     Coordinate System       :    TRIC                                                    
+                                     Constraints             :    No                                                      
+                                     Max. Number of Steps    :    300                                                     
+                                                                                                                          
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Info * Computing energy and gradient...                                                                                 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Info *   Energy   : -149.6467456516 a.u.                                                                                
+* Info *   Gradient : 3.021670e-02 a.u. (RMS)                                                                             
+* Info *              3.021692e-02 a.u. (Max)                                                                             
+* Info *   Time     : 3.72 sec                                                                                            
+                                                                                                                          
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Info * Computing energy and gradient...                                                                                 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Info *   Energy   : -149.6472639499 a.u.                                                                                
+* Info *   Gradient : 5.230269e-03 a.u. (RMS)                                                                             
+* Info *              5.230489e-03 a.u. (Max)                                                                             
+* Info *   Time     : 3.62 sec                                                                                            
+                                                                                                                          
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Info * Computing energy and gradient...                                                                                 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Info *   Energy   : -149.6472786059 a.u.                                                                                
+* Info *   Gradient : 3.976959e-04 a.u. (RMS)                                                                             
+* Info *              3.979181e-04 a.u. (Max)                                                                             
+* Info *   Time     : 3.66 sec                                                                                            
+                                                                                                                          
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Info * Computing energy and gradient...                                                                                 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Info *   Energy   : -149.6472786893 a.u.                                                                                
+* Info *   Gradient : 4.877024e-06 a.u. (RMS)                                                                             
+* Info *              5.060637e-06 a.u. (Max)                                                                             
+* Info *   Time     : 3.70 sec                                                                                            
+                                                                                                                          
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Info * Geometry optimization completed.                                                                                 
+                                                                                                                          
+                                              Molecular Geometry (Angstroms)                                              
+                                             ================================                                             
+                                                                                                                          
+                          Atom         Coordinate X          Coordinate Y          Coordinate Z                           
+                                                                                                                          
+                           O           0.000075408369        0.000061961869       -0.590903547695                         
+                           O           0.000060057579        0.000062008165        0.590874708984                         
+                                                                                                                          
+                                                                                                                          
+                                             Summary of Geometry Optimization                                             
+                                            ==================================                                            
+                                                                                                                          
+                  Opt.Step       Energy (a.u.)       Energy Change (a.u.)       Displacement (RMS, Max)                   
+                  -------------------------------------------------------------------------------------                   
+                      0        -149.646745651604        0.000000000000         0.000e+00      0.000e+00                   
+                      1        -149.647263949858       -0.000518298254         7.627e-03      7.627e-03                   
+                      2        -149.647278605880       -0.000014656022         1.597e-03      1.597e-03                   
+                      3        -149.647278689303       -0.000000083422         1.128e-04      1.128e-04                   
+                                                                                                                          
+                                                                                                                          
+                                              Statistical Deviation between                                               
+                                         Optimized Geometry and Initial Geometry                                          
+                                        =========================================                                         
+                                                                                                                          
+                               Internal Coord.        RMS deviation         Max. deviation                                
+                               -----------------------------------------------------------                                
+                                  Bonds               0.018 Angstrom        0.018 Angstrom                                
+                                                                                                                          
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                     *** Time spent in Optimization Driver: 14.78 sec                                     
+                                                                                                                          
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can now use this new geometry in subsequent calculations.</p>
+<div class="cell tag_output_scroll docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">molecule</span><span class="o">=</span><span class="n">casscf_opt_geom</span>
+<span class="n">mcscfdrv</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">molecule</span><span class="p">,</span><span class="n">basis</span><span class="p">,</span><span class="n">space</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>          Active space definition:
+          ------------------------
+Number of inactive (occupied) orbitals: 5
+Number of active orbitals:              4
+Number of virtual orbitals:             19
+
+    This is a CASSCF wavefunction: CAS(6,4)
+
+          CI expansion:
+          -------------
+Number of determinants:      6
+
+
+                                                                                                                          
+        MCSCF Iterations
+        ----------------
+                                                                                                                          
+     Iter. | Average Energy | E. Change | Grad. Norm | CI Iter. |   Time
+     ---------------------------------------------------------------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        1     -149.647278689     0.0e+00      9.8e-06          1   0:00:00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
+** Convergence reached in 1 iterations
+                                                                                                                          
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        Final results
+        -------------
+                                                                                                                          
+* State 1
+- Energy: -149.64727868935887
+- S^2   : 2.00  (multiplicity = 3.0 )
+- Natural orbitals
+1.95190 1.95190 1.04810 1.04810
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
+                                                 Spin Restricted Orbitals                                                 
+                                                 ------------------------                                                 
+                                                                                                                          
+               Molecular Orbital No.   4:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 2.000 Energy:   -1.08284 a.u.                                                                  
+               (   1 O   2s  :    -0.36) (   1 O   3s  :    -0.46) (   2 O   2s  :     0.36)                              
+               (   2 O   3s  :     0.46)                                                                                  
+                                                                                                                          
+               Molecular Orbital No.   5:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 2.000 Energy:   -0.72950 a.u.                                                                  
+               (   1 O   3s  :    -0.28) (   1 O   1p0 :     0.46) (   1 O   2p0 :     0.24)                              
+               (   2 O   3s  :    -0.28) (   2 O   1p0 :    -0.46) (   2 O   2p0 :    -0.24)                              
+                                                                                                                          
+               Molecular Orbital No.   6:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 1.952 Energy:   -0.71180 a.u.                                                                  
+               (   1 O   1p+1:     0.28) (   1 O   1p-1:    -0.35) (   1 O   2p+1:     0.17)                              
+               (   1 O   2p-1:    -0.22) (   2 O   1p+1:     0.28) (   2 O   1p-1:    -0.35)                              
+               (   2 O   2p+1:     0.17) (   2 O   2p-1:    -0.22)                                                        
+                                                                                                                          
+               Molecular Orbital No.   7:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 1.952 Energy:   -0.71180 a.u.                                                                  
+               (   1 O   1p+1:     0.35) (   1 O   1p-1:     0.28) (   1 O   2p+1:     0.22)                              
+               (   1 O   2p-1:     0.17) (   2 O   1p+1:     0.35) (   2 O   1p-1:     0.28)                              
+               (   2 O   2p+1:     0.22) (   2 O   2p-1:     0.17)                                                        
+                                                                                                                          
+               Molecular Orbital No.   8:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 1.048 Energy:   -0.27992 a.u.                                                                  
+               (   1 O   1p-1:    -0.53) (   1 O   2p-1:    -0.39) (   2 O   1p-1:     0.53)                              
+               (   2 O   2p-1:     0.39)                                                                                  
+                                                                                                                          
+               Molecular Orbital No.   9:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 1.048 Energy:   -0.27992 a.u.                                                                  
+               (   1 O   1p+1:     0.53) (   1 O   2p+1:     0.39) (   2 O   1p+1:    -0.53)                              
+               (   2 O   2p+1:    -0.39)                                                                                  
+                                                                                                                          
+               Molecular Orbital No.  10:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 0.000 Energy:    0.50049 a.u.                                                                  
+               (   1 O   2s  :    -0.18) (   1 O   3s  :    -1.40) (   1 O   1p0 :    -0.38)                              
+               (   1 O   2p0 :    -1.30) (   2 O   2s  :     0.18) (   2 O   3s  :     1.40)                              
+               (   2 O   1p0 :    -0.38) (   2 O   2p0 :    -1.30)                                                        
+                                                                                                                          
+               Molecular Orbital No.  11:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 0.000 Energy:    1.09707 a.u.                                                                  
+               (   1 O   3s  :     1.01) (   1 O   1p0 :    -0.72) (   1 O   2p0 :     1.31)                              
+               (   2 O   3s  :    -1.01) (   2 O   1p0 :    -0.72) (   2 O   2p0 :     1.31)                              
+                                                                                                                          
+               Molecular Orbital No.  12:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 0.000 Energy:    1.11115 a.u.                                                                  
+               (   1 O   1p+1:    -0.67) (   1 O   2p+1:     0.62) (   2 O   1p+1:    -0.67)                              
+               (   2 O   2p+1:     0.62)                                                                                  
+                                                                                                                          
+               Molecular Orbital No.  13:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 0.000 Energy:    1.11115 a.u.                                                                  
+               (   1 O   1p-1:     0.67) (   1 O   2p-1:    -0.62) (   2 O   1p-1:     0.67)                              
+               (   2 O   2p-1:    -0.62)                                                                                  
+                                                                                                                          
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
+Total MCSCF time: 00:00:00
+</pre></div>
+</div>
+</div>
+</div>
+<p>If your MCSCF calculation is a state-averaged, you should extend the parameters of the compute function with the number of states in the state-averaging and the index (starting from 0) of the state you wish to optimize:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">casscf_opt_geom</span> <span class="o">=</span> <span class="n">opt_drv</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">molecule</span><span class="p">,</span> <span class="n">basis</span><span class="p">,</span> <span class="n">space</span><span class="p">,</span> <span class="n">nstates</span><span class="p">,</span> <span class="n">istate</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="spectroscopy">
+<h2>Spectroscopy<a class="headerlink" href="#spectroscopy" title="Permalink to this headline">¶</a></h2>
+<p>MCSCF is commonly used to simulate spectroscopy and photochemistry. There are several ways to compute excited state properties from a MCSCF calculation. Currently, MultiPsi implements only properties from a state-averaged calculation.</p>
+<p>Let’s go back to our furan calculation. First we compute a SA-CASSCF with 5 states:</p>
+<div class="cell tag_output_scroll docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">furan_xyz</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;9</span>
+
+<span class="s2"> C     -0.86213    -0.90784     0.00007</span>
+<span class="s2"> H     -1.63433    -1.64264    -0.00003</span>
+<span class="s2"> C      0.50727    -0.90524     0.00007</span>
+<span class="s2"> C      0.92057     0.47886    -0.00003</span>
+<span class="s2"> C     -0.22323     1.23186    -0.00003</span>
+<span class="s2"> O     -1.35123     0.40376    -0.00013</span>
+<span class="s2"> H      1.17117    -1.74724     0.00017</span>
+<span class="s2"> H      1.93767     0.81866     0.00007</span>
+<span class="s2"> H     -0.46573     2.26986    -0.00013</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">molecule</span> <span class="o">=</span> <span class="n">vlx</span><span class="o">.</span><span class="n">Molecule</span><span class="o">.</span><span class="n">from_xyz_string</span><span class="p">(</span><span class="n">furan_xyz</span><span class="p">)</span>
+<span class="n">basis</span> <span class="o">=</span> <span class="n">vlx</span><span class="o">.</span><span class="n">MolecularBasis</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">molecule</span><span class="p">,</span><span class="s2">&quot;def2-sv(p)&quot;</span><span class="p">)</span>
+
+<span class="c1">#We use a previously stored h5 file for the active space</span>
+<span class="n">space</span><span class="o">=</span><span class="n">mtp</span><span class="o">.</span><span class="n">OrbSpace</span><span class="p">(</span><span class="n">molecule</span><span class="p">,</span><span class="s2">&quot;furan-cas.h5&quot;</span><span class="p">)</span>
+<span class="n">mcscfdrv</span><span class="o">=</span><span class="n">mtp</span><span class="o">.</span><span class="n">McscfDriver</span><span class="p">()</span>
+<span class="n">mcscfdrv</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">molecule</span><span class="p">,</span><span class="n">basis</span><span class="p">,</span><span class="n">space</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="c1">#state-averaged with 5 states</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>          Active space definition:
+          ------------------------
+Number of inactive (occupied) orbitals: 15
+Number of active orbitals:              5
+Number of virtual orbitals:             58
+
+    This is a CASSCF wavefunction: CAS(6,5)
+
+          CI expansion:
+          -------------
+Number of determinants:      55
+
+
+                                                                                                                          
+        MCSCF Iterations
+        ----------------
+                                                                                                                          
+     Iter. | Average Energy | E. Change | Grad. Norm | CI Iter. |   Time
+     ---------------------------------------------------------------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        1     -228.211383987     0.0e+00      1.6e-01          1   0:00:00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        2     -228.223997559    -1.3e-02      8.1e-02          1   0:00:00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        3     -228.226393803    -2.4e-03      1.8e-02          1   0:00:00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        4     -228.226480980    -8.7e-05      4.4e-03          1   0:00:00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        5     -228.226488145    -7.2e-06      7.9e-04          1   0:00:00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        6     -228.226488311    -1.7e-07      1.9e-04          1   0:00:00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        7     -228.226488323    -1.1e-08      4.7e-05          1   0:00:00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        8     -228.226488324    -8.9e-10      1.5e-05          1   0:00:00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
+** Convergence reached in 8 iterations
+                                                                                                                          
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        Final results
+        -------------
+                                                                                                                          
+* State 1
+- Energy: -228.48133300321237
+- S^2   : -0.00  (multiplicity = 1.0 )
+- Natural orbitals
+1.99277 1.94494 1.90452 0.09562 0.06215
+                                                                                                                          
+* State 2
+- Energy: -228.23632225186466
+- S^2   : 0.00  (multiplicity = 1.0 )
+- Natural orbitals
+1.98998 1.43257 1.34064 0.74092 0.49589
+                                                                                                                          
+* State 3
+- Energy: -228.1765965440034
+- S^2   : -0.00  (multiplicity = 1.0 )
+- Natural orbitals
+1.94567 1.97827 1.03236 0.97318 0.07053
+                                                                                                                          
+* State 4
+- Energy: -228.12869622259342
+- S^2   : 12.00  (multiplicity = 7.0 )
+- Natural orbitals
+2.00000 1.00000 1.00000 1.00000 1.00000
+                                                                                                                          
+* State 5
+- Energy: -228.1094935964197
+- S^2   : -0.00  (multiplicity = 1.0 )
+- Natural orbitals
+1.95161 1.39436 1.25216 1.09983 0.30204
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
+                                                 Spin Restricted Orbitals                                                 
+                                                 ------------------------                                                 
+                                                                                                                          
+               Molecular Orbital No.  14:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 2.000 Energy:   -0.56530 a.u.                                                                  
+               (   3 C   1p-1:    -0.26) (   4 C   1p+1:     0.22) (   4 C   1p-1:     0.16)                              
+               (   6 O   1p+1:     0.43) (   6 O   2p+1:     0.32) (   7 H   1s  :     0.19)                              
+               (   8 H   1s  :     0.19)                                                                                  
+                                                                                                                          
+               Molecular Orbital No.  15:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 2.000 Energy:   -0.54782 a.u.                                                                  
+               (   1 C   1p+1:     0.25) (   2 H   1s  :    -0.16) (   3 C   1p+1:    -0.21)                              
+               (   3 C   1p-1:    -0.27) (   4 C   1p-1:     0.34) (   4 C   2p-1:     0.16)                              
+               (   5 C   1p+1:     0.22) (   6 O   1p+1:    -0.22) (   6 O   2p+1:    -0.17)                              
+               (   9 H   1s  :    -0.16)                                                                                  
+                                                                                                                          
+               Molecular Orbital No.  16:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 1.939 Energy:   -0.59935 a.u.                                                                  
+               (   1 C   1p0 :    -0.19) (   5 C   1p0 :    -0.19) (   6 O   1p0 :    -0.51)                              
+               (   6 O   2p0 :    -0.36)                                                                                  
+                                                                                                                          
+               Molecular Orbital No.  17:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 1.566 Energy:   -0.34172 a.u.                                                                  
+               (   3 C   1p0 :    -0.35) (   3 C   2p0 :    -0.26) (   4 C   1p0 :    -0.35)                              
+               (   4 C   2p0 :    -0.26) (   6 O   1p0 :     0.30) (   6 O   2p0 :     0.25)                              
+                                                                                                                          
+               Molecular Orbital No.  18:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 1.296 Energy:   -0.24166 a.u.                                                                  
+               (   1 C   1p0 :     0.37) (   1 C   2p0 :     0.29) (   3 C   1p0 :     0.23)                              
+               (   3 C   2p0 :     0.19) (   4 C   1p0 :    -0.23) (   4 C   2p0 :    -0.19)                              
+               (   5 C   1p0 :    -0.37) (   5 C   2p0 :    -0.29)                                                        
+                                                                                                                          
+               Molecular Orbital No.  19:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 0.803 Energy:   -0.07295 a.u.                                                                  
+               (   1 C   1p0 :     0.40) (   1 C   2p0 :     0.47) (   3 C   1p0 :    -0.17)                              
+               (   3 C   2p0 :    -0.28) (   4 C   1p0 :    -0.17) (   4 C   2p0 :    -0.28)                              
+               (   5 C   1p0 :     0.40) (   5 C   2p0 :     0.47) (   6 O   1p0 :    -0.31)                              
+               (   6 O   2p0 :    -0.37)                                                                                  
+                                                                                                                          
+               Molecular Orbital No.  20:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 0.396 Energy:   -0.04458 a.u.                                                                  
+               (   1 C   1p0 :     0.29) (   1 C   2p0 :     0.38) (   3 C   1p0 :    -0.43)                              
+               (   3 C   2p0 :    -0.61) (   4 C   1p0 :     0.43) (   4 C   2p0 :     0.61)                              
+               (   5 C   1p0 :    -0.29) (   5 C   2p0 :    -0.38)                                                        
+                                                                                                                          
+               Molecular Orbital No.  21:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 0.000 Energy:    0.20635 a.u.                                                                  
+               (   1 C   3s  :     0.65) (   1 C   2p+1:    -0.30) (   1 C   2p-1:    -0.24)                              
+               (   2 H   2s  :    -0.98) (   3 C   3s  :     0.97) (   3 C   2p+1:     0.29)                              
+               (   3 C   2p-1:    -0.39) (   4 C   3s  :     0.97) (   4 C   2p+1:     0.46)                              
+               (   4 C   2p-1:     0.17) (   5 C   3s  :     0.65) (   5 C   2p-1:     0.36)                              
+               (   7 H   2s  :    -1.31) (   8 H   2s  :    -1.31) (   9 H   2s  :    -0.98)                              
+                                                                                                                          
+               Molecular Orbital No.  22:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 0.000 Energy:    0.23239 a.u.                                                                  
+               (   1 C   3s  :     0.74) (   1 C   2p+1:    -0.86) (   1 C   2p-1:    -0.80)                              
+               (   2 H   2s  :    -1.90) (   3 C   3s  :     1.09) (   3 C   2p-1:     0.24)                              
+               (   4 C   3s  :    -1.10) (   4 C   2p-1:     0.20) (   5 C   3s  :    -0.73)                              
+               (   5 C   1p-1:    -0.16) (   5 C   2p+1:     0.28) (   5 C   2p-1:    -1.14)                              
+               (   7 H   2s  :    -0.34) (   8 H   2s  :     0.35) (   9 H   2s  :     1.89)                              
+                                                                                                                          
+               Molecular Orbital No.  23:                                                                                 
+               --------------------------                                                                                 
+               Occupation: 0.000 Energy:    0.23464 a.u.                                                                  
+               (   1 C   3s  :     0.95) (   1 C   2p+1:    -0.61) (   1 C   2p-1:    -0.55)                              
+               (   2 H   2s  :    -1.56) (   3 C   3s  :    -0.61) (   3 C   2p+1:    -0.33)                              
+               (   3 C   2p-1:     0.60) (   4 C   3s  :    -0.60) (   4 C   2p+1:    -0.60)                              
+               (   4 C   2p-1:    -0.32) (   5 C   3s  :     0.96) (   5 C   2p+1:    -0.21)                              
+               (   5 C   2p-1:     0.81) (   7 H   2s  :     1.13) (   8 H   2s  :     1.13)                              
+               (   9 H   2s  :    -1.57)                                                                                  
+                                                                                                                          
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
+Total MCSCF time: 00:00:05
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we can compute the transition properties using the InterState module. This module requires the CI vectors computed by the MCSCF.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Compute oscillator strengths</span>
+<span class="n">SI</span><span class="o">=</span><span class="n">mtp</span><span class="o">.</span><span class="n">InterState</span><span class="p">()</span>
+<span class="n">Prop_dict</span><span class="o">=</span><span class="n">SI</span><span class="o">.</span><span class="n">diposc</span><span class="p">(</span><span class="n">molecule</span><span class="p">,</span><span class="n">basis</span><span class="p">,</span><span class="n">mcscfdrv</span><span class="o">.</span><span class="n">CIVecs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
+List of oscillator strengths greather than 1e-10
+                                                                                                                          
+  From     to       Energy (eV)    Oscillator strength (length and velocity)
+     1       2        6.66708         3.935228e-03    2.925456e-03
+     1       3        8.29230         2.426600e-01    1.672872e-01
+     1       5       10.11827         5.706685e-01    4.028088e-01
+</pre></div>
+</div>
+</div>
+</div>
+<p>The function returns a dictionary with the most important values.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">Prop_dict</span><span class="p">[</span><span class="s2">&quot;energies&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Prop_dict</span><span class="p">[</span><span class="s2">&quot;oscillator_strengths&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.24501075 0.30473646 0.35263678 0.37183941]
+[3.93522815e-03 2.42660014e-01 3.29004223e-25 5.70668499e-01]
+</pre></div>
+</div>
+</div>
+</div>
+<p>By default InterState computes properties from the first state to all others, but this can be changed by providing the list of “initial” and “final” states as arguments.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Prop_dict</span><span class="o">=</span><span class="n">SI</span><span class="o">.</span><span class="n">diposc</span><span class="p">(</span><span class="n">molecule</span><span class="p">,</span><span class="n">basis</span><span class="p">,</span><span class="n">mcscfdrv</span><span class="o">.</span><span class="n">CIVecs</span><span class="p">,</span> <span class="n">ifrom</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="n">ito</span><span class="o">=</span><span class="s1">&#39;all&#39;</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
+List of oscillator strengths greather than 1e-10
+                                                                                                                          
+  From     to       Energy (eV)    Oscillator strength (length and velocity)
+     1       2        6.66708         3.935228e-03    2.925456e-03
+     1       3        8.29230         2.426600e-01    1.672872e-01
+     1       5       10.11827         5.706685e-01    4.028088e-01
+     2       3        1.62522         2.610885e-02    2.178061e-02
+     2       5        3.45118         1.364278e-03    1.798930e-04
+</pre></div>
+</div>
+</div>
+</div>
+<p>The diposc function is a shortcut to the compute function that takes a list of properties as argument. Thus it is equivalent to calling</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Prop_dict</span> <span class="o">=</span> <span class="n">SI</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">molecule</span><span class="p">,</span><span class="n">basis</span><span class="p">,</span> <span class="n">mcscfdrv</span><span class="o">.</span><span class="n">CIVecs</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;absorption&quot;</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;all&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The list of properties can also accept ‘ecd’ to compute electric circular dichroism.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Prop_dict</span> <span class="o">=</span> <span class="n">SI</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">molecule</span><span class="p">,</span><span class="n">basis</span><span class="p">,</span> <span class="n">mcscfdrv</span><span class="o">.</span><span class="n">CIVecs</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;absorption&quot;</span><span class="p">,</span> <span class="s2">&quot;ecd&quot;</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;all&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>which adds “rotatory_strengths” to the dictionary. There is also a shortcut function to compute only the ECD spectrum:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Prop_dict</span> <span class="o">=</span> <span class="n">SI</span><span class="o">.</span><span class="n">ecd</span><span class="p">(</span><span class="n">molecule</span><span class="p">,</span><span class="n">basis</span><span class="p">,</span> <span class="n">mcscfdrv</span><span class="o">.</span><span class="n">CIVecs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="mcscf.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">MCSCF</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="active-space.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Selecting an active space</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By The MultiPsi developers<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
