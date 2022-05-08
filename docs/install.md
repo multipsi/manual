@@ -39,13 +39,7 @@ $ conda activate mtpenv
 
 as should be indicated by getting a modified prompt.
 
-To use the orbital viewer, inside this newly created environment you need to run the commands:
-
-```
-$ conda activate mtpenv
-```
-
-Inside this newly created environment, you should now be ready to start a Jupyter notebook with the command
+To enable the orbital viewer, inside this newly created environment you need to run the commands:
 
 ```
 $ jupyter nbextension install --py --user k3d
