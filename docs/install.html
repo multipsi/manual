@@ -42,8 +42,6 @@
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -300,8 +298,8 @@ Retrieve miniconda from the following website</p>
 <p>Install the version for 64 bit computers that comes with Python (&gt;=3.6).</p>
 <p>Start a conda terminal, or Anaconda Powershell as it is referred to on a Windows system. Conda supports multiple <em>environments</em>
 and you start in the one named <code class="docutils literal notranslate"><span class="pre">base</span></code> as is typically indicated by the prompt.
-To create a new and additional environment named <code class="docutils literal notranslate"><span class="pre">mtpenv</span></code> and install MultiPsi, Matplotlib, and Jupyter notebook (and package dependencies such as VeloxChem, NumPy and SciPy) into it, you enter the following command line statement</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda create -n mtpenv multipsi matplotlib jupyterlab -c veloxchem -c conda-forge
+To create a new environment named <code class="docutils literal notranslate"><span class="pre">mtpenv</span></code> and install MultiPsi, Jupyter notebook and k3d (and package dependencies such as VeloxChem, NumPy and SciPy) into it, you enter the following command line statement</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda create -n mtpenv multipsi k3d jupyterlab -c veloxchem -c conda-forge
 </pre></div>
 </div>
 <p>You can list your conda environments</p>
@@ -313,11 +311,16 @@ To create a new and additional environment named <code class="docutils literal n
 </pre></div>
 </div>
 <p>as should be indicated by getting a modified prompt.</p>
-<p>Inside this newly created environment, you should now be ready to start a Jupyter notebook with the command</p>
+<p>To enable the orbital viewer, inside this newly created environment you need to run the commands:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ jupyter nbextension install --py --user k3d
+$ jupyter nbextension enable --py --user k3d
+</pre></div>
+</div>
+<p>You are now ready to open the notebook using the command:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ jupyter-notebook
 </pre></div>
 </div>
-<p>which should open in your default web browser. A notebook allows for interactive execution of Python code written into cells. You should now be able to import the MultiPsiand VeloxChem modules in a cell:</p>
+<p>which should open in your default web browser. A notebook allows for interactive execution of Python code written into cells. You should now be able to import the MultiPsi and VeloxChem modules in a cell:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">veloxchem</span> <span class="k">as</span> <span class="nn">vlx</span>
 <span class="kn">import</span> <span class="nn">multipsi</span> <span class="k">as</span> <span class="nn">mtp</span>
 </pre></div>

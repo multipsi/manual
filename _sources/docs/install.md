@@ -19,10 +19,10 @@ Install the version for 64 bit computers that comes with Python (>=3.6).
 
 Start a conda terminal, or Anaconda Powershell as it is referred to on a Windows system. Conda supports multiple *environments*
 and you start in the one named `base` as is typically indicated by the prompt.
-To create a new and additional environment named `mtpenv` and install MultiPsi, Matplotlib, and Jupyter notebook (and package dependencies such as VeloxChem, NumPy and SciPy) into it, you enter the following command line statement
+To create a new environment named `mtpenv` and install MultiPsi, Jupyter notebook and k3d (and package dependencies such as VeloxChem, NumPy and SciPy) into it, you enter the following command line statement
 
 ```
-$ conda create -n mtpenv multipsi matplotlib jupyterlab -c veloxchem -c conda-forge
+$ conda create -n mtpenv multipsi k3d jupyterlab -c veloxchem -c conda-forge
 ```
 
 You can list your conda environments
@@ -39,13 +39,20 @@ $ conda activate mtpenv
 
 as should be indicated by getting a modified prompt.
 
-Inside this newly created environment, you should now be ready to start a Jupyter notebook with the command
+To enable the orbital viewer, inside this newly created environment you need to run the commands:
+
+```
+$ jupyter nbextension install --py --user k3d
+$ jupyter nbextension enable --py --user k3d
+```
+
+You are now ready to open the notebook using the command:
 
 ```
 $ jupyter-notebook
 ```
 
-which should open in your default web browser. A notebook allows for interactive execution of Python code written into cells. You should now be able to import the MultiPsiand VeloxChem modules in a cell:
+which should open in your default web browser. A notebook allows for interactive execution of Python code written into cells. You should now be able to import the MultiPsi and VeloxChem modules in a cell:
 
 ```
 import veloxchem as vlx
