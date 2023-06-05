@@ -15,7 +15,7 @@ Retrieve miniconda from the following website
 
 > <https://docs.conda.io/en/latest/miniconda.html>
 
-Install the version for 64 bit computers that comes with Python (>=3.6).
+Install the version for 64 bit computers that comes with Python (>=3.8).
 
 Start a conda terminal, or Anaconda Powershell as it is referred to on a Windows system. Conda supports multiple *environments*
 and you start in the one named `base` as is typically indicated by the prompt.
@@ -39,13 +39,6 @@ $ conda activate mtpenv
 
 as should be indicated by getting a modified prompt.
 
-To enable the orbital viewer, inside this newly created environment you need to run the commands:
-
-```
-$ jupyter nbextension install --py --user k3d
-$ jupyter nbextension enable --py --user k3d
-```
-
 You are now ready to open the notebook using the command:
 
 ```
@@ -62,3 +55,9 @@ import multipsi as mtp
 and start calculations. See the [eChem](https://kthpanor.github.io/echem) book for a multitude of examples.
 
 ## Installing from source
+
+Soon!
+
+```python
+
+```
