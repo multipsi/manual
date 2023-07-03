@@ -7,6 +7,7 @@ parts:
 - caption: Getting started
   chapters:
   - file: docs/install
+  - file: docs/running
 - caption: Basic tutorials
   chapters:
   - file: docs/ci
@@ -15,7 +16,4 @@ parts:
 - caption: Advanced tutorials
   chapters:
   - file: docs/active-space
-- caption: Classes
-  chapters:
-  - file: docs/orbspace
 
