@@ -1,0 +1,59 @@
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/vlxenv/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/opt/anaconda3/envs/vlxenv/lib/python3.9/site-packages/nbclient/client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/opt/anaconda3/envs/vlxenv/lib/python3.9/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/opt/anaconda3/envs/vlxenv/lib/python3.9/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/opt/anaconda3/envs/vlxenv/lib/python3.9/asyncio/base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "/opt/anaconda3/envs/vlxenv/lib/python3.9/site-packages/nbclient/client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "/opt/anaconda3/envs/vlxenv/lib/python3.9/site-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/opt/anaconda3/envs/vlxenv/lib/python3.9/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import veloxchem as vlx
+import multipsi as mtp
+furan_xyz="""9
+
+ C     -0.86213    -0.90784     0.00007
+ H     -1.63433    -1.64264    -0.00003
+ C      0.50727    -0.90524     0.00007
+ C      0.92057     0.47886    -0.00003
+ C     -0.22323     1.23186    -0.00003
+ O     -1.35123     0.40376    -0.00013
+ H      1.17117    -1.74724     0.00017
+ H      1.93767     0.81866     0.00007
+ H     -0.46573     2.26986    -0.00013
+"""
+
+molecule = vlx.Molecule.from_xyz_string(furan_xyz)
+basis = vlx.MolecularBasis.read(molecule,"def2-sv(p)")
+
+#Generate the extended Hückel guess
+ehtdriver=mtp.EHTDriver()
+guessorb=ehtdriver.compute(molecule,basis)
+
+#Visualize the orbitals using Veloxchel OrbitalViewer
+
+orbviewer=vlx.OrbitalViewer()
+orbviewer.plot(molecule,basis,guessorb)
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mAttributeError[0m                            Traceback (most recent call last)
+Cell [0;32mIn [1], line 20[0m
+[1;32m     17[0m basis [38;5;241m=[39m vlx[38;5;241m.[39mMolecularBasis[38;5;241m.[39mread(molecule,[38;5;124m"[39m[38;5;124mdef2-sv(p)[39m[38;5;124m"[39m)
+[1;32m     19[0m [38;5;66;03m#Generate the extended Hückel guess[39;00m
+[0;32m---> 20[0m ehtdriver[38;5;241m=[39m[43mmtp[49m[38;5;241;43m.[39;49m[43mEHTDriver[49m()
+[1;32m     21[0m guessorb[38;5;241m=[39mehtdriver[38;5;241m.[39mcompute(molecule,basis)
+[1;32m     23[0m [38;5;66;03m#Visualize the orbitals using Veloxchel OrbitalViewer[39;00m
+
+[0;31mAttributeError[0m: module 'multipsi' has no attribute 'EHTDriver'
+AttributeError: module 'multipsi' has no attribute 'EHTDriver'
+

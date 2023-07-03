@@ -112,6 +112,11 @@
    Installing the program
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="running.html">
+   Running MultiPsi and input/code structure
+  </a>
+ </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
@@ -414,7 +419,7 @@
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Info * Starting Reduced Basis SCF calculation...                                                                        
-* Info * ...done. SCF energy in reduced basis set: -149.476779742205 a.u. Time: 0.05 sec.                                 
+* Info * ...done. SCF energy in reduced basis set: -149.476779742205 a.u. Time: 0.04 sec.                                 
                                                                                                                           
 </pre></div>
 </div>
@@ -433,29 +438,29 @@
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
                Iter. | Hartree-Fock Energy | Energy Change | Gradient Norm | Max. Gradient | Density Change               
                --------------------------------------------------------------------------------------------               
-                  1      -149.542125579047    0.0000000000      0.13766387      0.02716695      0.00000000                
+                  1      -149.542125579048    0.0000000000      0.13766387      0.02707071      0.00000000                
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  2      -149.544062025428   -0.0019364464      0.03694035      0.00577490      0.04278216                
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  2      -149.544062025428   -0.0019364464      0.03694035      0.00577703      0.04278216                
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  3      -149.544206427498   -0.0001444021      0.00793470      0.00101935      0.01143915                
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  3      -149.544206427497   -0.0001444021      0.00793470      0.00101573      0.01143915                
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  4      -149.544214388681   -0.0000079612      0.00166969      0.00028871      0.00263638                
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  5      -149.544214746985   -0.0000003583      0.00010855      0.00001729      0.00054642                
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  5      -149.544214746984   -0.0000003583      0.00010855      0.00001729      0.00054642                
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  6      -149.544214748589   -0.0000000016      0.00000796      0.00000116      0.00003713                
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  6      -149.544214748590   -0.0000000016      0.00000796      0.00000116      0.00003713                
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  7      -149.544214748599   -0.0000000000      0.00000081      0.00000012      0.00000307                
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
-               *** SCF converged in 7 iterations. Time: 0.40 sec.                                                         
+               *** SCF converged in 7 iterations. Time: 0.39 sec.                                                         
                                                                                                                           
 </pre></div>
 </div>
@@ -487,8 +492,8 @@
                Molecular Orbital No.   5:                                                                                 
                --------------------------                                                                                 
                Occupation: 1.000 Energy:   -0.76819 a.u.                                                                  
-               (   1 O   1p+1:     0.46) (   1 O   2p+1:     0.27) (   2 O   1p+1:     0.46)                              
-               (   2 O   2p+1:     0.27)                                                                                  
+               (   1 O   1p-1:     0.46) (   1 O   2p-1:     0.26) (   2 O   1p-1:     0.46)                              
+               (   2 O   2p-1:     0.26)                                                                                  
                                                                                                                           
                Molecular Orbital No.   6:                                                                                 
                --------------------------                                                                                 
@@ -499,20 +504,20 @@
                Molecular Orbital No.   7:                                                                                 
                --------------------------                                                                                 
                Occupation: 1.000 Energy:   -0.65086 a.u.                                                                  
-               (   1 O   1p-1:     0.43) (   1 O   2p-1:     0.30) (   2 O   1p-1:     0.43)                              
-               (   2 O   2p-1:     0.30)                                                                                  
+               (   1 O   1p+1:     0.42) (   1 O   2p+1:     0.30) (   2 O   1p+1:     0.42)                              
+               (   2 O   2p+1:     0.30)                                                                                  
                                                                                                                           
                Molecular Orbital No.   8:                                                                                 
                --------------------------                                                                                 
                Occupation: 1.000 Energy:   -0.46179 a.u.                                                                  
-               (   1 O   1p+1:    -0.53) (   1 O   2p+1:    -0.41) (   2 O   1p+1:     0.53)                              
-               (   2 O   2p+1:     0.41)                                                                                  
+               (   1 O   1p-1:    -0.53) (   1 O   2p-1:    -0.41) (   2 O   1p-1:     0.53)                              
+               (   2 O   2p-1:     0.41)                                                                                  
                                                                                                                           
                Molecular Orbital No.   9:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.000 Energy:    0.03549 a.u.                                                                  
-               (   1 O   1p-1:     0.47) (   1 O   2p-1:     0.50) (   2 O   1p-1:    -0.47)                              
-               (   2 O   2p-1:    -0.50)                                                                                  
+               (   1 O   1p+1:    -0.46) (   1 O   2p+1:    -0.50) (   2 O   1p+1:     0.46)                              
+               (   2 O   2p+1:     0.50)                                                                                  
                                                                                                                           
                Molecular Orbital No.  10:                                                                                 
                --------------------------                                                                                 
@@ -530,14 +535,14 @@
                Molecular Orbital No.  12:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.000 Energy:    1.09748 a.u.                                                                  
-               (   1 O   1p+1:    -0.67) (   1 O   2p+1:     0.63) (   2 O   1p+1:    -0.67)                              
-               (   2 O   2p+1:     0.63)                                                                                  
+               (   1 O   1p-1:     0.66) (   1 O   2p-1:    -0.63) (   2 O   1p-1:     0.66)                              
+               (   2 O   2p-1:    -0.63)                                                                                  
                                                                                                                           
                Molecular Orbital No.  13:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.000 Energy:    1.11959 a.u.                                                                  
-               (   1 O   1p-1:     0.69) (   1 O   2p-1:    -0.61) (   2 O   1p-1:     0.69)                              
-               (   2 O   2p-1:    -0.61)                                                                                  
+               (   1 O   1p+1:    -0.69) (   1 O   2p+1:     0.61) (   2 O   1p+1:    -0.69)                              
+               (   2 O   2p+1:     0.61)                                                                                  
                                                                                                                           
                                              Spin Unrestricted Beta Orbitals                                              
                                              -------------------------------                                              
@@ -551,8 +556,8 @@
                Molecular Orbital No.   5:                                                                                 
                --------------------------                                                                                 
                Occupation: 1.000 Energy:   -0.76819 a.u.                                                                  
-               (   1 O   1p+1:     0.46) (   1 O   2p+1:     0.27) (   2 O   1p+1:     0.46)                              
-               (   2 O   2p+1:     0.27)                                                                                  
+               (   1 O   1p-1:     0.46) (   1 O   2p-1:     0.26) (   2 O   1p-1:     0.46)                              
+               (   2 O   2p-1:     0.26)                                                                                  
                                                                                                                           
                Molecular Orbital No.   6:                                                                                 
                --------------------------                                                                                 
@@ -563,20 +568,20 @@
                Molecular Orbital No.   7:                                                                                 
                --------------------------                                                                                 
                Occupation: 1.000 Energy:   -0.65086 a.u.                                                                  
-               (   1 O   1p-1:     0.43) (   1 O   2p-1:     0.30) (   2 O   1p-1:     0.43)                              
-               (   2 O   2p-1:     0.30)                                                                                  
+               (   1 O   1p+1:     0.42) (   1 O   2p+1:     0.30) (   2 O   1p+1:     0.42)                              
+               (   2 O   2p+1:     0.30)                                                                                  
                                                                                                                           
                Molecular Orbital No.   8:                                                                                 
                --------------------------                                                                                 
                Occupation: 1.000 Energy:   -0.46179 a.u.                                                                  
-               (   1 O   1p+1:    -0.53) (   1 O   2p+1:    -0.41) (   2 O   1p+1:     0.53)                              
-               (   2 O   2p+1:     0.41)                                                                                  
+               (   1 O   1p-1:    -0.53) (   1 O   2p-1:    -0.41) (   2 O   1p-1:     0.53)                              
+               (   2 O   2p-1:     0.41)                                                                                  
                                                                                                                           
                Molecular Orbital No.   9:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.000 Energy:    0.03549 a.u.                                                                  
-               (   1 O   1p-1:     0.47) (   1 O   2p-1:     0.50) (   2 O   1p-1:    -0.47)                              
-               (   2 O   2p-1:    -0.50)                                                                                  
+               (   1 O   1p+1:    -0.46) (   1 O   2p+1:    -0.50) (   2 O   1p+1:     0.46)                              
+               (   2 O   2p+1:     0.50)                                                                                  
                                                                                                                           
                Molecular Orbital No.  10:                                                                                 
                --------------------------                                                                                 
@@ -594,14 +599,14 @@
                Molecular Orbital No.  12:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.000 Energy:    1.09748 a.u.                                                                  
-               (   1 O   1p+1:    -0.67) (   1 O   2p+1:     0.63) (   2 O   1p+1:    -0.67)                              
-               (   2 O   2p+1:     0.63)                                                                                  
+               (   1 O   1p-1:     0.66) (   1 O   2p-1:    -0.63) (   2 O   1p-1:     0.66)                              
+               (   2 O   2p-1:    -0.63)                                                                                  
                                                                                                                           
                Molecular Orbital No.  13:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.000 Energy:    1.11959 a.u.                                                                  
-               (   1 O   1p-1:     0.69) (   1 O   2p-1:    -0.61) (   2 O   1p-1:     0.69)                              
-               (   2 O   2p-1:    -0.61)                                                                                  
+               (   1 O   1p+1:    -0.69) (   1 O   2p+1:     0.61) (   2 O   1p+1:    -0.69)                              
+               (   2 O   2p+1:     0.61)                                                                                  
                                                                                                                           
 </pre></div>
 </div>
@@ -644,116 +649,173 @@ Number of determinants:      10
      ---------------------------------------------------------------------
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        1     -149.544777660     0.0e+00      1.6e-03          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        1     -149.545104086     0.0e+00      4.9e-03          1   0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        2     -149.545937503    -1.2e-03      5.3e-03          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        2     -149.549494546    -4.4e-03      1.6e-02          1   0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        3     -149.551099683    -5.2e-03      1.9e-02          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        3     -149.555989175    -6.5e-03      2.2e-02          1   0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        4     -149.563802299    -1.3e-02      3.7e-02          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        4     -149.558351119    -2.4e-03      5.1e-02          1   0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        5     -149.577278353    -1.3e-02      4.1e-02          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        5     -149.562987409    -4.6e-03      5.6e-02          1   0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        6     -149.580051990    -2.8e-03      6.0e-02          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        6     -149.563733027    -7.5e-04      5.3e-02          1   0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        7     -149.585776147    -5.7e-03      4.5e-02          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        7     -149.566448460    -2.7e-03      4.0e-02          1   0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        8     -149.592814869    -7.0e-03      4.6e-02          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        8     -149.568952607    -2.5e-03      3.0e-02          1   0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        9     -149.600068052    -7.3e-03      7.8e-02          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        9     -149.570347496    -1.4e-03      2.8e-02          1   0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       10     -149.605037069    -5.0e-03      9.9e-02          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       10     -149.570966631    -6.2e-04      3.1e-02          1   0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       11     -149.608156603    -3.1e-03      1.0e-01          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       11     -149.571431768    -4.7e-04      2.0e-02          1   0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       12     -149.611610441    -3.5e-03      5.5e-02          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       12     -149.571664380    -2.3e-04      2.5e-02          1   0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       13     -149.611315019     3.0e-04      5.9e-02          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       13     -149.571590634     7.4e-05      3.5e-02          1   0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       14     -149.612445425    -1.1e-03      3.2e-02          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       14     -149.571896297    -3.1e-04      3.1e-02          1   0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       15     -149.612703066    -2.6e-04      1.3e-02          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       15     -149.572226269    -3.3e-04      2.4e-02          1   0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       16     -149.612842614    -1.4e-04      3.3e-02          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       16     -149.572613427    -3.9e-04      2.1e-02          1   0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       17     -149.613084848    -2.4e-04      3.0e-02          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       17     -149.573085583    -4.7e-04      3.5e-02          1   0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       18     -149.613248765    -1.6e-04      1.9e-02          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       18     -149.573927161    -8.4e-04      5.1e-02          1   0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       19     -149.613406428    -1.6e-04      1.0e-02          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       19     -149.574760541    -8.3e-04      7.6e-02          1   0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       20     -149.613443150    -3.7e-05      3.5e-03          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       20     -149.575480930    -7.2e-04      9.8e-02          1   0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       21     -149.613449788    -6.6e-06      2.1e-03          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       21     -149.576520363    -1.0e-03      1.1e-01          1   0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       22     -149.613453723    -3.9e-06      1.6e-03          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       22     -149.577399459    -8.8e-04      1.3e-01          1   0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       23     -149.613456611    -2.9e-06      1.3e-03          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       23     -149.579447509    -2.0e-03      1.4e-01          1   0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       24     -149.613458917    -2.3e-06      9.5e-04          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       24     -149.580960459    -1.5e-03      1.6e-01          1   0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       25     -149.613460173    -1.3e-06      6.4e-04          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       25     -149.588382976    -7.4e-03      1.4e-01          1   0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       26     -149.613460738    -5.6e-07      3.8e-04          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       26     -149.593986466    -5.6e-03      1.0e-01          1   0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       27     -149.613461010    -2.7e-07      2.6e-04          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       27     -149.601153894    -7.2e-03      1.2e-01          1   0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       28     -149.613461162    -1.5e-07      2.1e-04          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       28     -149.605912738    -4.8e-03      1.3e-01          1   0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       29     -149.613461222    -6.0e-08      1.4e-04          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       29     -149.599407507     6.5e-03      2.7e-01          1   0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       30     -149.613461236    -1.4e-08      6.7e-05          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       30     -149.604795999    -5.4e-03      1.5e-01          1   0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       31     -149.613461242    -5.3e-09      4.7e-05          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       31     -149.608288112    -3.5e-03      7.9e-02          1   0:00:00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       32     -149.608563516    -2.8e-04      6.1e-02          1   0:00:00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       33     -149.608526073     3.7e-05      1.1e-01          1   0:00:00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       34     -149.609100782    -5.7e-04      5.8e-02          1   0:00:00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       35     -149.609298212    -2.0e-04      4.5e-02          1   0:00:00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       36     -149.609608387    -3.1e-04      4.2e-02          1   0:00:00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       37     -149.611205124    -1.6e-03      2.9e-02          1   0:00:00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       38     -149.612226408    -1.0e-03      1.5e-02          1   0:00:00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       39     -149.613008091    -7.8e-04      1.2e-02          1   0:00:00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       40     -149.613245060    -2.4e-04      6.0e-03          1   0:00:00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       41     -149.613379336    -1.3e-04      1.0e-02          1   0:00:00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       42     -149.613428720    -4.9e-05      2.8e-03          1   0:00:00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       43     -149.613443997    -1.5e-05      1.1e-03          1   0:00:00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       44     -149.613450804    -6.8e-06      1.3e-03          1   0:00:00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       45     -149.613453395    -2.6e-06      7.4e-04          1   0:00:00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       46     -149.613456098    -2.7e-06      5.7e-04          1   0:00:00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       47     -149.613458468    -2.4e-06      1.0e-03          1   0:00:00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       48     -149.613460218    -1.7e-06      9.0e-04          1   0:00:00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       49     -149.613461068    -8.5e-07      3.9e-04          1   0:00:00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       50     -149.613461221    -1.5e-07      1.4e-04          1   0:00:00
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
-** Convergence reached in 31 iterations
+** Convergence not reached after 50 iterations
                                                                                                                           
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING! Your active orbitals may have changed significantly
-Min_overlap = 0.046006011799619696
+Min_overlap = 0.028175644943359588
                                                                                                                           
         Final results
         -------------
                                                                                                                           
                                                                                                                           
 * State 1
-- Energy: -149.61346124159257
+- Energy: -149.6134612214384
 - S^2   : 0.00  (multiplicity = 1.0 )
 - Natural orbitals
-1.99871 1.99617 1.84334 0.16177
+1.99871 1.99617 1.84335 0.16176
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
@@ -763,18 +825,18 @@ Min_overlap = 0.046006011799619696
                Molecular Orbital No.   4:                                                                                 
                --------------------------                                                                                 
                Occupation: 2.000 Energy:   -0.75839 a.u.                                                                  
-               (   1 O   1p+1:    -0.46) (   1 O   2p+1:    -0.27) (   2 O   1p+1:    -0.46)                              
-               (   2 O   2p+1:    -0.27)                                                                                  
+               (   1 O   1p-1:     0.46) (   1 O   2p-1:     0.27) (   2 O   1p-1:     0.46)                              
+               (   2 O   2p-1:     0.27)                                                                                  
                                                                                                                           
                Molecular Orbital No.   5:                                                                                 
                --------------------------                                                                                 
                Occupation: 2.000 Energy:   -0.45010 a.u.                                                                  
-               (   1 O   1p+1:    -0.52) (   1 O   2p+1:    -0.41) (   2 O   1p+1:     0.52)                              
-               (   2 O   2p+1:     0.41)                                                                                  
+               (   1 O   1p-1:     0.52) (   1 O   2p-1:     0.41) (   2 O   1p-1:    -0.52)                              
+               (   2 O   2p-1:    -0.41)                                                                                  
                                                                                                                           
                Molecular Orbital No.   6:                                                                                 
                --------------------------                                                                                 
-               Occupation: 1.999 Energy:   -0.97384 a.u.                                                                  
+               Occupation: 1.999 Energy:   -0.97638 a.u.                                                                  
                (   1 O   2s  :     0.26) (   1 O   3s  :     0.37) (   1 O   1p0 :    -0.32)                              
                (   1 O   2p0 :    -0.19) (   2 O   2s  :     0.26) (   2 O   3s  :     0.37)                              
                (   2 O   1p0 :     0.32) (   2 O   2p0 :     0.19)                                                        
@@ -787,15 +849,15 @@ Min_overlap = 0.046006011799619696
                                                                                                                           
                Molecular Orbital No.   8:                                                                                 
                --------------------------                                                                                 
-               Occupation: 1.843 Energy:   -0.61732 a.u.                                                                  
-               (   1 O   1p-1:     0.44) (   1 O   2p-1:     0.28) (   2 O   1p-1:     0.44)                              
-               (   2 O   2p-1:     0.28)                                                                                  
+               Occupation: 1.843 Energy:   -0.61733 a.u.                                                                  
+               (   1 O   1p+1:     0.44) (   1 O   2p+1:     0.28) (   2 O   1p+1:     0.44)                              
+               (   2 O   2p+1:     0.28)                                                                                  
                                                                                                                           
                Molecular Orbital No.   9:                                                                                 
                --------------------------                                                                                 
-               Occupation: 0.162 Energy:    0.04984 a.u.                                                                  
-               (   1 O   1p-1:    -0.59) (   1 O   2p-1:    -0.31) (   2 O   1p-1:     0.59)                              
-               (   2 O   2p-1:     0.31)                                                                                  
+               Occupation: 0.162 Energy:    0.04985 a.u.                                                                  
+               (   1 O   1p+1:     0.59) (   1 O   2p+1:     0.31) (   2 O   1p+1:    -0.59)                              
+               (   2 O   2p+1:    -0.30)                                                                                  
                                                                                                                           
                Molecular Orbital No.  10:                                                                                 
                --------------------------                                                                                 
@@ -813,14 +875,14 @@ Min_overlap = 0.046006011799619696
                Molecular Orbital No.  12:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.000 Energy:    1.10519 a.u.                                                                  
-               (   1 O   1p+1:     0.67) (   1 O   2p+1:    -0.63) (   2 O   1p+1:     0.67)                              
-               (   2 O   2p+1:    -0.63)                                                                                  
+               (   1 O   1p-1:     0.67) (   1 O   2p-1:    -0.63) (   2 O   1p-1:     0.67)                              
+               (   2 O   2p-1:    -0.63)                                                                                  
                                                                                                                           
                Molecular Orbital No.  13:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.000 Energy:    1.11946 a.u.                                                                  
-               (   1 O   1p-1:     0.68) (   1 O   2p-1:    -0.62) (   2 O   1p-1:     0.68)                              
-               (   2 O   2p-1:    -0.62)                                                                                  
+               (   1 O   1p+1:    -0.68) (   1 O   2p+1:     0.62) (   2 O   1p+1:    -0.68)                              
+               (   2 O   2p+1:     0.62)                                                                                  
                                                                                                                           
                                                                                                                           
 Total MCSCF time: 00:00:00
@@ -892,11 +954,17 @@ Number of determinants:      10
      ---------------------------------------------------------------------
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        1     -149.613461242     0.0e+00      4.7e-05          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        1     -149.613461221     0.0e+00      1.4e-04          1   0:00:00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        2     -149.613461238    -1.6e-08      7.4e-05          1   0:00:00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        3     -149.613461246    -8.6e-09      2.6e-05          1   0:00:00
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
-** Convergence reached in 1 iterations
+** Convergence reached in 3 iterations
                                                                                                                           
 </pre></div>
 </div>
@@ -905,10 +973,10 @@ Number of determinants:      10
                                                                                                                           
                                                                                                                           
 * State 1
-- Energy: -149.61346124159314
+- Energy: -149.61346124611669
 - S^2   : 0.00  (multiplicity = 1.0 )
 - Natural orbitals
-1.99871 1.99617 1.84334 0.16177
+1.99871 1.99617 1.84335 0.16177
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
@@ -918,39 +986,39 @@ Number of determinants:      10
                Molecular Orbital No.   4:                                                                                 
                --------------------------                                                                                 
                Occupation: 2.000 Energy:   -0.75839 a.u.                                                                  
-               (   1 O   1p+1:     0.46) (   1 O   2p+1:     0.27) (   2 O   1p+1:     0.46)                              
-               (   2 O   2p+1:     0.27)                                                                                  
+               (   1 O   1p-1:    -0.46) (   1 O   2p-1:    -0.27) (   2 O   1p-1:    -0.46)                              
+               (   2 O   2p-1:    -0.27)                                                                                  
                                                                                                                           
                Molecular Orbital No.   5:                                                                                 
                --------------------------                                                                                 
                Occupation: 2.000 Energy:   -0.45010 a.u.                                                                  
-               (   1 O   1p+1:    -0.52) (   1 O   2p+1:    -0.41) (   2 O   1p+1:     0.52)                              
-               (   2 O   2p+1:     0.41)                                                                                  
+               (   1 O   1p-1:    -0.52) (   1 O   2p-1:    -0.41) (   2 O   1p-1:     0.52)                              
+               (   2 O   2p-1:     0.41)                                                                                  
                                                                                                                           
                Molecular Orbital No.   6:                                                                                 
                --------------------------                                                                                 
-               Occupation: 1.999 Energy:   -0.97384 a.u.                                                                  
-               (   1 O   2s  :    -0.26) (   1 O   3s  :    -0.37) (   1 O   1p0 :     0.32)                              
-               (   1 O   2p0 :     0.19) (   2 O   2s  :    -0.26) (   2 O   3s  :    -0.37)                              
-               (   2 O   1p0 :    -0.32) (   2 O   2p0 :    -0.19)                                                        
+               Occupation: 1.999 Energy:   -0.97412 a.u.                                                                  
+               (   1 O   2s  :     0.26) (   1 O   3s  :     0.37) (   1 O   1p0 :    -0.32)                              
+               (   1 O   2p0 :    -0.19) (   2 O   2s  :     0.26) (   2 O   3s  :     0.37)                              
+               (   2 O   1p0 :     0.32) (   2 O   2p0 :     0.19)                                                        
                                                                                                                           
                Molecular Orbital No.   7:                                                                                 
                --------------------------                                                                                 
-               Occupation: 1.996 Energy:   -1.09566 a.u.                                                                  
+               Occupation: 1.996 Energy:   -1.09567 a.u.                                                                  
                (   1 O   2s  :     0.36) (   1 O   3s  :     0.46) (   2 O   2s  :    -0.36)                              
                (   2 O   3s  :    -0.46)                                                                                  
                                                                                                                           
                Molecular Orbital No.   8:                                                                                 
                --------------------------                                                                                 
                Occupation: 1.843 Energy:   -0.61732 a.u.                                                                  
-               (   1 O   1p-1:    -0.44) (   1 O   2p-1:    -0.28) (   2 O   1p-1:    -0.44)                              
-               (   2 O   2p-1:    -0.28)                                                                                  
+               (   1 O   1p+1:    -0.44) (   1 O   2p+1:    -0.28) (   2 O   1p+1:    -0.44)                              
+               (   2 O   2p+1:    -0.28)                                                                                  
                                                                                                                           
                Molecular Orbital No.   9:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.162 Energy:    0.04984 a.u.                                                                  
-               (   1 O   1p-1:    -0.59) (   1 O   2p-1:    -0.31) (   2 O   1p-1:     0.59)                              
-               (   2 O   2p-1:     0.31)                                                                                  
+               (   1 O   1p+1:     0.59) (   1 O   2p+1:     0.30) (   2 O   1p+1:    -0.59)                              
+               (   2 O   2p+1:    -0.31)                                                                                  
                                                                                                                           
                Molecular Orbital No.  10:                                                                                 
                --------------------------                                                                                 
@@ -968,23 +1036,23 @@ Number of determinants:      10
                Molecular Orbital No.  12:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.000 Energy:    1.10519 a.u.                                                                  
-               (   1 O   1p+1:    -0.67) (   1 O   2p+1:     0.63) (   2 O   1p+1:    -0.67)                              
-               (   2 O   2p+1:     0.63)                                                                                  
+               (   1 O   1p-1:    -0.67) (   1 O   2p-1:     0.63) (   2 O   1p-1:    -0.67)                              
+               (   2 O   2p-1:     0.63)                                                                                  
                                                                                                                           
                Molecular Orbital No.  13:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.000 Energy:    1.11946 a.u.                                                                  
-               (   1 O   1p-1:     0.68) (   1 O   2p-1:    -0.62) (   2 O   1p-1:     0.68)                              
-               (   2 O   2p-1:    -0.62)                                                                                  
+               (   1 O   1p+1:    -0.68) (   1 O   2p+1:     0.62) (   2 O   1p+1:    -0.68)                              
+               (   2 O   2p+1:     0.62)                                                                                  
                                                                                                                           
                                                                                                                           
 Total MCSCF time: 00:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Info *   Energy   : -149.6134612416 a.u.                                                                                
-* Info *   Gradient : 1.499811e-03 a.u. (RMS)                                                                             
-* Info *              1.500021e-03 a.u. (Max)                                                                             
-* Info *   Time     : 1.90 sec                                                                                            
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Info *   Energy   : -149.6134612461 a.u.                                                                                
+* Info *   Gradient : 1.499819e-03 a.u. (RMS)                                                                             
+* Info *              1.499860e-03 a.u. (Max)                                                                             
+* Info *   Time     : 1.83 sec                                                                                            
                                                                                                                           
 </pre></div>
 </div>
@@ -1039,7 +1107,7 @@ Number of determinants:      10
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        3     -149.613462575    -4.6e-08      1.2e-04          1   0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        4     -149.613462577    -1.3e-09      2.7e-05          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        4     -149.613462577    -1.3e-09      2.8e-05          1   0:00:00
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
@@ -1052,7 +1120,7 @@ Number of determinants:      10
                                                                                                                           
                                                                                                                           
 * State 1
-- Energy: -149.61346257674984
+- Energy: -149.61346257675027
 - S^2   : 0.00  (multiplicity = 1.0 )
 - Natural orbitals
 1.99871 1.99617 1.84385 0.16127
@@ -1065,14 +1133,14 @@ Number of determinants:      10
                Molecular Orbital No.   4:                                                                                 
                --------------------------                                                                                 
                Occupation: 2.000 Energy:   -0.75869 a.u.                                                                  
-               (   1 O   1p+1:    -0.46) (   1 O   2p+1:    -0.27) (   2 O   1p+1:    -0.46)                              
-               (   2 O   2p+1:    -0.27)                                                                                  
+               (   1 O   1p-1:    -0.46) (   1 O   2p-1:    -0.27) (   2 O   1p-1:    -0.46)                              
+               (   2 O   2p-1:    -0.27)                                                                                  
                                                                                                                           
                Molecular Orbital No.   5:                                                                                 
                --------------------------                                                                                 
                Occupation: 2.000 Energy:   -0.44982 a.u.                                                                  
-               (   1 O   1p+1:    -0.52) (   1 O   2p+1:    -0.41) (   2 O   1p+1:     0.52)                              
-               (   2 O   2p+1:     0.41)                                                                                  
+               (   1 O   1p-1:     0.52) (   1 O   2p-1:     0.41) (   2 O   1p-1:    -0.52)                              
+               (   2 O   2p-1:    -0.41)                                                                                  
                                                                                                                           
                Molecular Orbital No.   6:                                                                                 
                --------------------------                                                                                 
@@ -1090,14 +1158,14 @@ Number of determinants:      10
                Molecular Orbital No.   8:                                                                                 
                --------------------------                                                                                 
                Occupation: 1.844 Energy:   -0.61778 a.u.                                                                  
-               (   1 O   1p-1:    -0.44) (   1 O   2p-1:    -0.28) (   2 O   1p-1:    -0.44)                              
-               (   2 O   2p-1:    -0.28)                                                                                  
+               (   1 O   1p+1:    -0.44) (   1 O   2p+1:    -0.28) (   2 O   1p+1:    -0.44)                              
+               (   2 O   2p+1:    -0.28)                                                                                  
                                                                                                                           
                Molecular Orbital No.   9:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.161 Energy:    0.05037 a.u.                                                                  
-               (   1 O   1p-1:     0.59) (   1 O   2p-1:     0.31) (   2 O   1p-1:    -0.59)                              
-               (   2 O   2p-1:    -0.31)                                                                                  
+               (   1 O   1p+1:     0.59) (   1 O   2p+1:     0.30) (   2 O   1p+1:    -0.59)                              
+               (   2 O   2p+1:    -0.30)                                                                                  
                                                                                                                           
                Molecular Orbital No.  10:                                                                                 
                --------------------------                                                                                 
@@ -1109,29 +1177,29 @@ Number of determinants:      10
                Molecular Orbital No.  11:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.000 Energy:    1.08993 a.u.                                                                  
-               (   1 O   3s  :    -1.00) (   1 O   1p0 :     0.71) (   1 O   2p0 :    -1.32)                              
-               (   2 O   3s  :     1.00) (   2 O   1p0 :     0.71) (   2 O   2p0 :    -1.32)                              
+               (   1 O   3s  :     1.00) (   1 O   1p0 :    -0.71) (   1 O   2p0 :     1.32)                              
+               (   2 O   3s  :    -1.00) (   2 O   1p0 :    -0.71) (   2 O   2p0 :     1.32)                              
                                                                                                                           
                Molecular Orbital No.  12:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.000 Energy:    1.10515 a.u.                                                                  
-               (   1 O   1p+1:     0.67) (   1 O   2p+1:    -0.63) (   2 O   1p+1:     0.67)                              
-               (   2 O   2p+1:    -0.63)                                                                                  
+               (   1 O   1p-1:     0.67) (   1 O   2p-1:    -0.63) (   2 O   1p-1:     0.67)                              
+               (   2 O   2p-1:    -0.63)                                                                                  
                                                                                                                           
                Molecular Orbital No.  13:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.000 Energy:    1.11938 a.u.                                                                  
-               (   1 O   1p-1:     0.68) (   1 O   2p-1:    -0.62) (   2 O   1p-1:     0.68)                              
-               (   2 O   2p-1:    -0.62)                                                                                  
+               (   1 O   1p+1:    -0.68) (   1 O   2p+1:     0.62) (   2 O   1p+1:    -0.68)                              
+               (   2 O   2p+1:     0.62)                                                                                  
                                                                                                                           
                                                                                                                           
 Total MCSCF time: 00:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Info *   Energy   : -149.6134625767 a.u.                                                                                
-* Info *   Gradient : 3.545888e-04 a.u. (RMS)                                                                             
-* Info *              3.547914e-04 a.u. (Max)                                                                             
-* Info *   Time     : 2.04 sec                                                                                            
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Info *   Energy   : -149.6134625768 a.u.                                                                                
+* Info *   Gradient : 3.545852e-04 a.u. (RMS)                                                                             
+* Info *              3.546282e-04 a.u. (Max)                                                                             
+* Info *   Time     : 1.82 sec                                                                                            
                                                                                                                           
 </pre></div>
 </div>
@@ -1177,13 +1245,13 @@ Number of determinants:      10
      ---------------------------------------------------------------------
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        1     -149.613462602     0.0e+00      6.3e-04          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        1     -149.613462602     0.0e+00      6.4e-04          1   0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        2     -149.613462651    -4.8e-08      1.7e-04          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        2     -149.613462651    -4.9e-08      1.8e-04          1   0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        3     -149.613462655    -4.3e-09      3.8e-05          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        3     -149.613462655    -4.4e-09      4.1e-05          1   0:00:00
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
@@ -1196,7 +1264,7 @@ Number of determinants:      10
                                                                                                                           
                                                                                                                           
 * State 1
-- Energy: -149.61346265521846
+- Energy: -149.61346265521195
 - S^2   : 0.00  (multiplicity = 1.0 )
 - Natural orbitals
 1.99871 1.99617 1.84400 0.16112
@@ -1209,14 +1277,14 @@ Number of determinants:      10
                Molecular Orbital No.   4:                                                                                 
                --------------------------                                                                                 
                Occupation: 2.000 Energy:   -0.75878 a.u.                                                                  
-               (   1 O   1p+1:     0.46) (   1 O   2p+1:     0.27) (   2 O   1p+1:     0.46)                              
-               (   2 O   2p+1:     0.27)                                                                                  
+               (   1 O   1p-1:    -0.46) (   1 O   2p-1:    -0.27) (   2 O   1p-1:    -0.46)                              
+               (   2 O   2p-1:    -0.27)                                                                                  
                                                                                                                           
                Molecular Orbital No.   5:                                                                                 
                --------------------------                                                                                 
                Occupation: 2.000 Energy:   -0.44973 a.u.                                                                  
-               (   1 O   1p+1:    -0.52) (   1 O   2p+1:    -0.42) (   2 O   1p+1:     0.52)                              
-               (   2 O   2p+1:     0.42)                                                                                  
+               (   1 O   1p-1:     0.52) (   1 O   2p-1:     0.41) (   2 O   1p-1:    -0.52)                              
+               (   2 O   2p-1:    -0.41)                                                                                  
                                                                                                                           
                Molecular Orbital No.   6:                                                                                 
                --------------------------                                                                                 
@@ -1228,20 +1296,20 @@ Number of determinants:      10
                Molecular Orbital No.   7:                                                                                 
                --------------------------                                                                                 
                Occupation: 1.996 Energy:   -1.09535 a.u.                                                                  
-               (   1 O   2s  :    -0.36) (   1 O   3s  :    -0.46) (   2 O   2s  :     0.36)                              
-               (   2 O   3s  :     0.46)                                                                                  
+               (   1 O   2s  :     0.36) (   1 O   3s  :     0.46) (   2 O   2s  :    -0.36)                              
+               (   2 O   3s  :    -0.46)                                                                                  
                                                                                                                           
                Molecular Orbital No.   8:                                                                                 
                --------------------------                                                                                 
                Occupation: 1.844 Energy:   -0.61792 a.u.                                                                  
-               (   1 O   1p-1:    -0.44) (   1 O   2p-1:    -0.28) (   2 O   1p-1:    -0.44)                              
-               (   2 O   2p-1:    -0.28)                                                                                  
+               (   1 O   1p+1:    -0.44) (   1 O   2p+1:    -0.28) (   2 O   1p+1:    -0.44)                              
+               (   2 O   2p+1:    -0.28)                                                                                  
                                                                                                                           
                Molecular Orbital No.   9:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.161 Energy:    0.05053 a.u.                                                                  
-               (   1 O   1p-1:     0.59) (   1 O   2p-1:     0.31) (   2 O   1p-1:    -0.59)                              
-               (   2 O   2p-1:    -0.31)                                                                                  
+               (   1 O   1p+1:    -0.59) (   1 O   2p+1:    -0.30) (   2 O   1p+1:     0.59)                              
+               (   2 O   2p+1:     0.30)                                                                                  
                                                                                                                           
                Molecular Orbital No.  10:                                                                                 
                --------------------------                                                                                 
@@ -1259,28 +1327,28 @@ Number of determinants:      10
                Molecular Orbital No.  12:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.000 Energy:    1.10514 a.u.                                                                  
-               (   1 O   1p+1:     0.67) (   1 O   2p+1:    -0.63) (   2 O   1p+1:     0.67)                              
-               (   2 O   2p+1:    -0.63)                                                                                  
+               (   1 O   1p-1:    -0.67) (   1 O   2p-1:     0.63) (   2 O   1p-1:    -0.67)                              
+               (   2 O   2p-1:     0.63)                                                                                  
                                                                                                                           
                Molecular Orbital No.  13:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.000 Energy:    1.11936 a.u.                                                                  
-               (   1 O   1p-1:    -0.68) (   1 O   2p-1:     0.62) (   2 O   1p-1:    -0.68)                              
-               (   2 O   2p-1:     0.62)                                                                                  
+               (   1 O   1p+1:     0.68) (   1 O   2p+1:    -0.62) (   2 O   1p+1:     0.68)                              
+               (   2 O   2p+1:    -0.62)                                                                                  
                                                                                                                           
                                                                                                                           
 Total MCSCF time: 00:00:00
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Info *   Energy   : -149.6134626552 a.u.                                                                                
-* Info *   Gradient : 1.606173e-06 a.u. (RMS)                                                                             
-* Info *              1.782009e-06 a.u. (Max)                                                                             
-* Info *   Time     : 1.92 sec                                                                                            
+* Info *   Gradient : 1.508663e-06 a.u. (RMS)                                                                             
+* Info *              1.582280e-06 a.u. (Max)                                                                             
+* Info *   Time     : 1.87 sec                                                                                            
                                                                                                                           
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Info * Saving file: veloxchem_opt_2023-06-05T14.18.28_optim.xyz                                                         
-* Info * Saving file: veloxchem_opt_2023-06-05T14.18.28.log                                                               
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>* Info * Saving file: veloxchem_opt_2023-07-03T17.04.02_optim.xyz                                                         
+* Info * Saving file: veloxchem_opt_2023-07-03T17.04.02.log                                                               
                                                                                                                           
 </pre></div>
 </div>
@@ -1291,8 +1359,8 @@ Total MCSCF time: 00:00:00
                                                                                                                           
                           Atom         Coordinate X          Coordinate Y          Coordinate Z                           
                                                                                                                           
-                           O          -0.000012463515        0.000028159284       -0.599514253124                         
-                           O           0.000001103720        0.000030350703        0.599494151540                         
+                           O          -0.000017631365       -0.000009782820       -0.599502140009                         
+                           O           0.000026914578       -0.000005229729        0.599506273241                         
                                                                                                                           
                                                                                                                           
                                              Summary of Geometry Optimization                                             
@@ -1300,9 +1368,9 @@ Total MCSCF time: 00:00:00
                                                                                                                           
                   Opt.Step       Energy (a.u.)       Energy Change (a.u.)       Displacement (RMS, Max)                   
                   -------------------------------------------------------------------------------------                   
-                      0        -149.613461241593        0.000000000000         0.000e+00      0.000e+00                   
-                      1        -149.613462576750       -0.000001335157         3.786e-04      3.786e-04                   
-                      2        -149.613462655218       -0.000000078469         1.172e-04      1.172e-04                   
+                      0        -149.613461246117        0.000000000000         0.000e+00      0.000e+00                   
+                      1        -149.613462576750       -0.000001330634         3.786e-04      3.786e-04                   
+                      2        -149.613462655212       -0.000000078462         1.172e-04      1.172e-04                   
                                                                                                                           
                                                                                                                           
                                               Statistical Deviation between                                               
@@ -1315,7 +1383,7 @@ Total MCSCF time: 00:00:00
                                                                                                                           
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                     *** Time spent in Optimization Driver: 5.89 sec                                      
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                     *** Time spent in Optimization Driver: 5.55 sec                                      
                                                                                                                           
 </pre></div>
 </div>
@@ -1369,7 +1437,7 @@ Number of determinants:      10
      ---------------------------------------------------------------------
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        1     -149.613462655     0.0e+00      1.9e-05          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        1     -149.613462655     0.0e+00      1.8e-05          1   0:00:00
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
@@ -1382,7 +1450,7 @@ Number of determinants:      10
                                                                                                                           
                                                                                                                           
 * State 1
-- Energy: -149.61346265530923
+- Energy: -149.6134626553096
 - S^2   : 0.00  (multiplicity = 1.0 )
 - Natural orbitals
 1.99871 1.99617 1.84400 0.16112
@@ -1395,14 +1463,14 @@ Number of determinants:      10
                Molecular Orbital No.   4:                                                                                 
                --------------------------                                                                                 
                Occupation: 2.000 Energy:   -0.75878 a.u.                                                                  
-               (   1 O   1p+1:    -0.46) (   1 O   2p+1:    -0.27) (   2 O   1p+1:    -0.46)                              
-               (   2 O   2p+1:    -0.27)                                                                                  
+               (   1 O   1p-1:    -0.46) (   1 O   2p-1:    -0.27) (   2 O   1p-1:    -0.46)                              
+               (   2 O   2p-1:    -0.27)                                                                                  
                                                                                                                           
                Molecular Orbital No.   5:                                                                                 
                --------------------------                                                                                 
                Occupation: 2.000 Energy:   -0.44973 a.u.                                                                  
-               (   1 O   1p+1:     0.52) (   1 O   2p+1:     0.42) (   2 O   1p+1:    -0.52)                              
-               (   2 O   2p+1:    -0.42)                                                                                  
+               (   1 O   1p-1:     0.52) (   1 O   2p-1:     0.41) (   2 O   1p-1:    -0.52)                              
+               (   2 O   2p-1:    -0.41)                                                                                  
                                                                                                                           
                Molecular Orbital No.   6:                                                                                 
                --------------------------                                                                                 
@@ -1414,20 +1482,20 @@ Number of determinants:      10
                Molecular Orbital No.   7:                                                                                 
                --------------------------                                                                                 
                Occupation: 1.996 Energy:   -1.09535 a.u.                                                                  
-               (   1 O   2s  :     0.36) (   1 O   3s  :     0.46) (   2 O   2s  :    -0.36)                              
-               (   2 O   3s  :    -0.46)                                                                                  
+               (   1 O   2s  :    -0.36) (   1 O   3s  :    -0.46) (   2 O   2s  :     0.36)                              
+               (   2 O   3s  :     0.46)                                                                                  
                                                                                                                           
                Molecular Orbital No.   8:                                                                                 
                --------------------------                                                                                 
                Occupation: 1.844 Energy:   -0.61792 a.u.                                                                  
-               (   1 O   1p-1:     0.44) (   1 O   2p-1:     0.28) (   2 O   1p-1:     0.44)                              
-               (   2 O   2p-1:     0.28)                                                                                  
+               (   1 O   1p+1:     0.44) (   1 O   2p+1:     0.28) (   2 O   1p+1:     0.44)                              
+               (   2 O   2p+1:     0.28)                                                                                  
                                                                                                                           
                Molecular Orbital No.   9:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.161 Energy:    0.05053 a.u.                                                                  
-               (   1 O   1p-1:     0.59) (   1 O   2p-1:     0.31) (   2 O   1p-1:    -0.59)                              
-               (   2 O   2p-1:    -0.31)                                                                                  
+               (   1 O   1p+1:     0.59) (   1 O   2p+1:     0.30) (   2 O   1p+1:    -0.59)                              
+               (   2 O   2p+1:    -0.30)                                                                                  
                                                                                                                           
                Molecular Orbital No.  10:                                                                                 
                --------------------------                                                                                 
@@ -1445,14 +1513,14 @@ Number of determinants:      10
                Molecular Orbital No.  12:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.000 Energy:    1.10514 a.u.                                                                  
-               (   1 O   1p+1:     0.67) (   1 O   2p+1:    -0.63) (   2 O   1p+1:     0.67)                              
-               (   2 O   2p+1:    -0.63)                                                                                  
+               (   1 O   1p-1:     0.67) (   1 O   2p-1:    -0.63) (   2 O   1p-1:     0.67)                              
+               (   2 O   2p-1:    -0.63)                                                                                  
                                                                                                                           
                Molecular Orbital No.  13:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.000 Energy:    1.11936 a.u.                                                                  
-               (   1 O   1p-1:    -0.68) (   1 O   2p-1:     0.62) (   2 O   1p-1:    -0.68)                              
-               (   2 O   2p-1:     0.62)                                                                                  
+               (   1 O   1p+1:    -0.68) (   1 O   2p+1:     0.62) (   2 O   1p+1:    -0.68)                              
+               (   2 O   2p+1:     0.62)                                                                                  
                                                                                                                           
                                                                                                                           
 Total MCSCF time: 00:00:00
@@ -1590,31 +1658,31 @@ Number of determinants:      55
                                                                                                                           
                                                                                                                           
 * State 1
-- Energy: -228.48133300321214
-- S^2   : 0.00  (multiplicity = 1.0 )
+- Energy: -228.48133300321194
+- S^2   : -0.00  (multiplicity = 1.0 )
 - Natural orbitals
 1.99277 1.94494 1.90452 0.09562 0.06215
                                                                                                                           
 * State 2
-- Energy: -228.23632225186455
+- Energy: -228.23632225186427
 - S^2   : -0.00  (multiplicity = 1.0 )
 - Natural orbitals
 1.98998 1.43257 1.34064 0.74092 0.49589
                                                                                                                           
 * State 3
-- Energy: -228.176596544003
+- Energy: -228.17659654400288
 - S^2   : -0.00  (multiplicity = 1.0 )
 - Natural orbitals
 1.97827 1.94567 1.03236 0.97318 0.07053
                                                                                                                           
 * State 4
-- Energy: -228.12869622259313
+- Energy: -228.12869622259274
 - S^2   : 12.00  (multiplicity = 7.0 )
 - Natural orbitals
 2.00000 1.00000 1.00000 1.00000 1.00000
                                                                                                                           
 * State 5
-- Energy: -228.10949359641953
+- Energy: -228.1094935964193
 - S^2   : 0.00  (multiplicity = 1.0 )
 - Natural orbitals
 1.95161 1.39436 1.25216 1.09983 0.30204
@@ -1747,7 +1815,7 @@ List of rotatory strengths greater than 1e-10
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.24501075 0.30473646 0.35263678 0.37183941]
-[3.93522815e-03 2.42660014e-01 7.80846838e-26 5.70668499e-01]
+[3.93522815e-03 2.42660014e-01 2.18197505e-24 5.70668499e-01]
 </pre></div>
 </div>
 </div>
@@ -1857,7 +1925,7 @@ Number of determinants:      55
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        6     -228.488014067    -2.0e-07      1.8e-04          1   0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        7     -228.488014076    -8.8e-09      5.1e-05          1   0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        7     -228.488014076    -8.7e-09      5.1e-05          1   0:00:00
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
@@ -1866,14 +1934,12 @@ Number of determinants:      55
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        Final results
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        -------------
+        -------------
                                                                                                                           
                                                                                                                           
 * State 1
-- Energy: -228.48801407603156
-- S^2   : 0.00  (multiplicity = 1.0 )
+- Energy: -228.48801407603136
+- S^2   : -0.00  (multiplicity = 1.0 )
 - Natural orbitals
 1.99451 1.94212 1.90287 0.09708 0.06342
 </pre></div>
@@ -1963,18 +2029,34 @@ Total MCSCF time: 00:00:01
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
-Initialization time: 00:00:00
+                          Multi-Configurational Linear response Eigenvalue Solver
+                         =========================================================
                                                                                                                           
-          Linear eigensolver
-          ------------------
+        ╭────────────────────────────────────╮
+        │          Driver settings           │
+        ╰────────────────────────────────────╯
+          Number of states        : 5
                                                                                                                           
-CI parameters:      54
-Orbital parameters: 1235
+          Max. iterations         : 50
+          Residual norm threshold : 1e-08
                                                                                                                           
+          Integrals in memory
+          Trial vector settings:
+            - Linear dependence threshold :1e-10
+            - Min. trial vectors          :20
+            - Max. trial vectors          :60
+                                                                                                                          
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>          CI parameters:      54
+          Orbital parameters: 1235
                                                                                                                           
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
+Initialization time: 00:00:00
+                                                                                                                          
+                                                                                                                          
         MC-RPA Iterations
         -----------------
                                                                                                                           
@@ -2064,7 +2146,7 @@ Orbital parameters: 1235
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
-Total MC-RPA time: 00:00:08
+Total MC-RPA time: 00:00:07
 </pre></div>
 </div>
 </div>
@@ -2082,20 +2164,20 @@ Total MC-RPA time: 00:00:08
     ---------------------
                                                                                                                           
 * State 1
-- Exc. energy: 0.24232834425549662
+- Exc. energy: 0.24232834425547345
  Electrons     Excitation
  0.344    :   17  -&gt;   19
  0.260    :   18  -&gt;   20
  CI weight: 0.971  Orb weight: 0.029
                                                                                                                           
 * State 2
-- Exc. energy: 0.271290900324328
+- Exc. energy: 0.2712909003242779
  Electrons     Excitation
  0.906    :   18  -&gt;   19
  CI weight: 0.928  Orb weight: 0.072
                                                                                                                           
 * State 3
-- Exc. energy: 0.3257754793900555
+- Exc. energy: 0.3257754793900232
  Electrons     Excitation
  0.303    :   18  -&gt;   20
  0.264    :   17  -&gt;   19
@@ -2103,13 +2185,13 @@ Total MC-RPA time: 00:00:08
  CI weight: 0.924  Orb weight: 0.076
                                                                                                                           
 * State 4
-- Exc. energy: 0.330655249141654
+- Exc. energy: 0.3306552491416529
  Electrons     Excitation
  0.794    :   18  -&gt;   21
  CI weight: 0.000  Orb weight: 1.000
                                                                                                                           
 * State 5
-- Exc. energy: 0.3540495926926232
+- Exc. energy: 0.35404959269264924
  Electrons     Excitation
  0.638    :   18  -&gt;   22
  0.214    :   17  -&gt;   21
