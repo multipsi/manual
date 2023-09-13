@@ -5,10 +5,9 @@ This is the simplest way to obtain MultiPsi.
 It makes use of Conda, which is an open-source package and environment management system that runs on all major operating systems.
 
 Binaries are currently available for
-- MacOS
 - Linux
-
-In time, it will also be made available for Windows 
+- MacOS (intel and arm)
+- Windows
 
 It is enough that you install the minimal installer for conda named miniconda that includes only conda, Python, the packages they depend on, and a small number of other useful packages, including pip, zlib and a few others.
 Retrieve miniconda from the following website
