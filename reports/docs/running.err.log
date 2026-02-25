@@ -89,53 +89,30 @@ response_dict = mcrpa.compute(molecule, basis, mcscf_drv, n_states = 5)
      Iter. | Average Energy | E. Change | Grad. Norm | CI Iter. | Trust rad. |  Time
      ---------------------------------------------------------------------------------
 ----- stdout -----
--186.00540597666563
------ stdout -----
         1     -223.990804437     0.0e+00      1.3e+00         16        0.40    0:00:00
------ stdout -----
--186.04340973983983
 ----- stdout -----
         2     -224.232908972    -2.4e-01      1.4e-01         13        0.40    0:00:00
 ----- stdout -----
--184.86257985710103
         3     -224.282221229    -4.9e-02      1.0e-02          3        0.48    0:00:00
 ----- stdout -----
--184.71466776234593
         4     -224.288065932    -5.8e-03      1.3e-03          4        0.48    0:00:00
 ----- stdout -----
--184.56191770254173
         5     -224.288712397    -6.5e-04      1.7e-04          4        0.58    0:00:00
------ stdout -----
--184.48586137727955
 ----- stdout -----
         6     -224.288830390    -1.2e-04      3.0e-05          4        0.69    0:00:00
 ----- stdout -----
--184.45899246605458
------ stdout -----
         7     -224.288852010    -2.2e-05      7.9e-06          4        0.80    0:00:00
------ stdout -----
--184.45049439901703
 ----- stdout -----
         8     -224.288856464    -4.5e-06      8.4e-07          3        0.80    0:00:00
 ----- stdout -----
--184.45024099628392
------ stdout -----
         9     -224.288856934    -4.7e-07      9.7e-08          5        0.80    0:00:00
------ stdout -----
--184.45033531446055
 ----- stdout -----
        10     -224.288857006    -7.3e-08      1.5e-08          4        0.80    0:00:00
 ----- stdout -----
--184.45019640496633
------ stdout -----
        11     -224.288857022    -1.6e-08      5.3e-09          4        0.80    0:00:00
------ stdout -----
--184.44999541072525
 ----- stdout -----
        12     -224.288857026    -4.3e-09      1.9e-09          4        0.80    0:00:00
 ** Convergence reached in 12 iterations
------ stdout -----
--184.44994862525903
 ----- stdout -----
        13     -224.288857028    -1.3e-09      5.7e-10         14        0.80    0:00:00
                                                                                                                           
@@ -144,7 +121,7 @@ response_dict = mcrpa.compute(molecule, basis, mcscf_drv, n_states = 5)
                                                                                                                           
 * State 1
   - S^2    : 0.00  (multiplicity = 1.0 )
-  - Energy : -224.288857027729
+  - Energy : -224.28885702772897
   - Natural orbitals
 1.99224 1.99029 1.96397 1.95643 1.94794 1.76948 0.26738 0.06074 0.05154
                                                                                                                           
@@ -168,9 +145,9 @@ response_dict = mcrpa.compute(molecule, basis, mcscf_drv, n_states = 5)
                Molecular Orbital No.   7:                                                                                 
                --------------------------                                                                                 
                Occupation: 1.992 Energy:   -0.60885 a.u.                                                                  
-               (   2 O   1p-1:    -0.23) (   2 O   1p0 :     0.41) (   2 O   2p-1:    -0.19)                              
-               (   2 O   2p0 :     0.27) (   3 O   1p-1:    -0.23) (   3 O   1p0 :    -0.41)                              
-               (   3 O   2p-1:    -0.19) (   3 O   2p0 :    -0.27)                                                        
+               (   2 O   1p-1:     0.23) (   2 O   1p0 :    -0.41) (   2 O   2p-1:     0.19)                              
+               (   2 O   2p0 :    -0.27) (   3 O   1p-1:     0.23) (   3 O   1p0 :     0.41)                              
+               (   3 O   2p-1:     0.19) (   3 O   2p0 :     0.27)                                                        
                                                                                                                           
                Molecular Orbital No.   8:                                                                                 
                --------------------------                                                                                 
@@ -189,15 +166,15 @@ response_dict = mcrpa.compute(molecule, basis, mcscf_drv, n_states = 5)
                Molecular Orbital No.  10:                                                                                 
                --------------------------                                                                                 
                Occupation: 1.956 Energy:   -0.84371 a.u.                                                                  
-               (   1 O   1p0 :    -0.54) (   1 O   2p0 :    -0.33) (   2 O   1p-1:     0.19)                              
-               (   2 O   1p0 :     0.25) (   2 O   2p0 :     0.17) (   3 O   1p-1:    -0.19)                              
-               (   3 O   1p0 :     0.25) (   3 O   2p0 :     0.17)                                                        
+               (   1 O   1p0 :     0.54) (   1 O   2p0 :     0.33) (   2 O   1p-1:    -0.19)                              
+               (   2 O   1p0 :    -0.25) (   2 O   2p0 :    -0.17) (   3 O   1p-1:     0.19)                              
+               (   3 O   1p0 :    -0.25) (   3 O   2p0 :    -0.17)                                                        
                                                                                                                           
                Molecular Orbital No.  11:                                                                                 
                --------------------------                                                                                 
                Occupation: 1.948 Energy:   -0.83932 a.u.                                                                  
-               (   1 O   1p-1:     0.48) (   1 O   2p-1:     0.20) (   2 O   1p-1:    -0.35)                              
-               (   2 O   2p-1:    -0.20) (   3 O   1p-1:    -0.35) (   3 O   2p-1:    -0.20)                              
+               (   1 O   1p-1:    -0.48) (   1 O   2p-1:    -0.20) (   2 O   1p-1:     0.35)                              
+               (   2 O   2p-1:     0.20) (   3 O   1p-1:     0.35) (   3 O   2p-1:     0.20)                              
                                                                                                                           
                Molecular Orbital No.  12:                                                                                 
                --------------------------                                                                                 
@@ -214,10 +191,10 @@ response_dict = mcrpa.compute(molecule, basis, mcscf_drv, n_states = 5)
                Molecular Orbital No.  14:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.061 Energy:    0.41592 a.u.                                                                  
-               (   1 O   1s  :     0.16) (   1 O   2s  :     0.48) (   1 O   3s  :     0.30)                              
-               (   1 O   1p0 :     0.57) (   2 O   2s  :    -0.17) (   2 O   1p-1:     0.51)                              
-               (   2 O   1p0 :     0.15) (   2 O   2p-1:     0.18) (   3 O   2s  :    -0.17)                              
-               (   3 O   1p-1:    -0.51) (   3 O   1p0 :     0.15) (   3 O   2p-1:    -0.18)                              
+               (   1 O   1s  :    -0.16) (   1 O   2s  :    -0.48) (   1 O   3s  :    -0.30)                              
+               (   1 O   1p0 :    -0.57) (   2 O   2s  :     0.17) (   2 O   1p-1:    -0.51)                              
+               (   2 O   1p0 :    -0.15) (   2 O   2p-1:    -0.18) (   3 O   2s  :     0.17)                              
+               (   3 O   1p-1:     0.51) (   3 O   1p0 :    -0.15) (   3 O   2p-1:     0.18)                              
                                                                                                                           
                Molecular Orbital No.  15:                                                                                 
                --------------------------                                                                                 
@@ -298,7 +275,7 @@ Cell [0;32mIn[2], line 28[0m
 [1;32m     27[0m mcrpa [38;5;241m=[39m mtp[38;5;241m.[39mMclr_EigenSolver()
 [0;32m---> 28[0m response_dict [38;5;241m=[39m [43mmcrpa[49m[38;5;241;43m.[39;49m[43mcompute[49m[43m([49m[43mmolecule[49m[43m,[49m[43m [49m[43mbasis[49m[43m,[49m[43m [49m[43mmcscf_drv[49m[43m,[49m[43m [49m[43mn_states[49m[43m [49m[38;5;241;43m=[39;49m[43m [49m[38;5;241;43m5[39;49m[43m)[49m 
 
-File [0;32m~/anaconda3/envs/vlxenv/lib/python3.12/site-packages/multipsi/mclr_eigensolver.py:192[0m, in [0;36mMclr_EigenSolver.compute[0;34m(self, molecule, basis, mcscf_drv, n_states)[0m
+File [0;32m~/Terminal/multipsi_newcore/src/multipsi/mclr_eigensolver.py:192[0m, in [0;36mMclr_EigenSolver.compute[0;34m(self, molecule, basis, mcscf_drv, n_states)[0m
 [1;32m    189[0m [38;5;28;01mif[39;00m [38;5;28mself[39m[38;5;241m.[39mtda:
 [1;32m    190[0m     return_dict [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39m_compute_TDA(molecule, basis, n_states,
 [1;32m    191[0m                                          vecs, taus, min_trial, max_trial)

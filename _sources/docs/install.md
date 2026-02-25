@@ -58,6 +58,8 @@ and start calculations. See the [eChem](https://kthpanor.github.io/echem) book f
 To install from source, the easiest is to use the yml file to install all the dependencies through conda.
 
 ```
+git clone https://gitlab.com/MGDelcey/multipsi.git
+cd multipsi
 conda env create -f mtp_env.yml
 conda activate mtpenv
 ```
