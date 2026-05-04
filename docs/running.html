@@ -478,7 +478,7 @@ document.write(`
 <span class="n">guessorb</span> <span class="o">=</span> <span class="n">orbguess</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">molecule</span><span class="p">,</span> <span class="n">basis</span><span class="p">)</span>
 
 <span class="c1"># Define the active space (full valence = 9 2p orbitals, 12 electrons)</span>
-<span class="n">orb_space</span> <span class="o">=</span> <span class="n">mtp</span><span class="o">.</span><span class="n">OrbSpace</span><span class="p">(</span><span class="n">molecule</span><span class="p">,</span> <span class="n">guessorb</span><span class="p">)</span>
+<span class="n">orb_space</span> <span class="o">=</span> <span class="n">mtp</span><span class="o">.</span><span class="n">OrbSpace</span><span class="p">(</span><span class="n">molecule</span><span class="p">,</span> <span class="n">basis</span><span class="p">,</span> <span class="n">guessorb</span><span class="p">)</span>
 <span class="n">orb_space</span><span class="o">.</span><span class="n">cas</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
 
 <span class="c1"># MCSCF energy</span>
@@ -579,7 +579,7 @@ document.write(`
                                                                                                                           
 * State 1
   - S^2    : 0.00  (multiplicity = 1.0 )
-  - Energy : -224.288857027729
+  - Energy : -224.28885702772914
   - Natural orbitals
 1.99224 1.99029 1.96397 1.95643 1.94794 1.76948 0.26738 0.06074 0.05154
                                                                                                                           
@@ -603,9 +603,9 @@ document.write(`
                Molecular Orbital No.   7:                                                                                 
                --------------------------                                                                                 
                Occupation: 1.992 Energy:   -0.60885 a.u.                                                                  
-               (   2 O   1p-1:     0.23) (   2 O   1p0 :    -0.41) (   2 O   2p-1:     0.19)                              
-               (   2 O   2p0 :    -0.27) (   3 O   1p-1:     0.23) (   3 O   1p0 :     0.41)                              
-               (   3 O   2p-1:     0.19) (   3 O   2p0 :     0.27)                                                        
+               (   2 O   1p-1:    -0.23) (   2 O   1p0 :     0.41) (   2 O   2p-1:    -0.19)                              
+               (   2 O   2p0 :     0.27) (   3 O   1p-1:    -0.23) (   3 O   1p0 :    -0.41)                              
+               (   3 O   2p-1:    -0.19) (   3 O   2p0 :    -0.27)                                                        
                                                                                                                           
                Molecular Orbital No.   8:                                                                                 
                --------------------------                                                                                 
@@ -624,15 +624,15 @@ document.write(`
                Molecular Orbital No.  10:                                                                                 
                --------------------------                                                                                 
                Occupation: 1.956 Energy:   -0.84371 a.u.                                                                  
-               (   1 O   1p0 :    -0.54) (   1 O   2p0 :    -0.33) (   2 O   1p-1:     0.19)                              
-               (   2 O   1p0 :     0.25) (   2 O   2p0 :     0.17) (   3 O   1p-1:    -0.19)                              
-               (   3 O   1p0 :     0.25) (   3 O   2p0 :     0.17)                                                        
+               (   1 O   1p0 :     0.54) (   1 O   2p0 :     0.33) (   2 O   1p-1:    -0.19)                              
+               (   2 O   1p0 :    -0.25) (   2 O   2p0 :    -0.17) (   3 O   1p-1:     0.19)                              
+               (   3 O   1p0 :    -0.25) (   3 O   2p0 :    -0.17)                                                        
                                                                                                                           
                Molecular Orbital No.  11:                                                                                 
                --------------------------                                                                                 
                Occupation: 1.948 Energy:   -0.83932 a.u.                                                                  
-               (   1 O   1p-1:    -0.48) (   1 O   2p-1:    -0.20) (   2 O   1p-1:     0.35)                              
-               (   2 O   2p-1:     0.20) (   3 O   1p-1:     0.35) (   3 O   2p-1:     0.20)                              
+               (   1 O   1p-1:     0.48) (   1 O   2p-1:     0.20) (   2 O   1p-1:    -0.35)                              
+               (   2 O   2p-1:    -0.20) (   3 O   1p-1:    -0.35) (   3 O   2p-1:    -0.20)                              
                                                                                                                           
                Molecular Orbital No.  12:                                                                                 
                --------------------------                                                                                 
@@ -643,8 +643,8 @@ document.write(`
                Molecular Orbital No.  13:                                                                                 
                --------------------------                                                                                 
                Occupation: 0.267 Energy:   -0.05109 a.u.                                                                  
-               (   1 O   1p+1:     0.46) (   1 O   2p+1:     0.28) (   2 O   1p+1:    -0.50)                              
-               (   2 O   2p+1:    -0.24) (   3 O   1p+1:    -0.50) (   3 O   2p+1:    -0.24)                              
+               (   1 O   1p+1:    -0.46) (   1 O   2p+1:    -0.28) (   2 O   1p+1:     0.50)                              
+               (   2 O   2p+1:     0.24) (   3 O   1p+1:     0.50) (   3 O   2p+1:     0.24)                              
                                                                                                                           
                Molecular Orbital No.  14:                                                                                 
                --------------------------                                                                                 
@@ -693,7 +693,7 @@ document.write(`
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
-Total MCSCF time: 00:00:02
+Total MCSCF time: 00:00:04
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                                                                          
@@ -737,67 +737,64 @@ Total MCSCF time: 00:00:02
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        1       0.221894240      3.0e-01      0/  5     6 +   5      0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        2       0.118905971      1.1e-01      0/  5    11 +   5      0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        2       0.118905967      1.1e-01      0/  5    11 +   5      0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        3       0.104328105      3.1e-02      0/  5    14 +   7      0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        3       0.104328101      3.1e-02      0/  5    14 +   7      0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        4       0.098001882      1.0e-02      0/  5    19 +   7      0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        4       0.098001880      1.0e-02      0/  5    19 +   7      0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        5       0.096767956      5.6e-03      0/  5    23 +   8      0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        5       0.096767955      5.6e-03      0/  5    23 +   8      0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        6       0.095904944      2.2e-03      0/  5    28 +   8      0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        6       0.095904942      2.2e-03      0/  5    28 +   8      0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        7       0.095605132      1.3e-03      0/  5    32 +   9      0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        7       0.095605129      1.3e-03      0/  5    32 +   9      0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        8       0.095473998      7.7e-04      0/  5    37 +   9      0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        8       0.095473985      7.7e-04      0/  5    37 +   9      0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        9       0.095413884      2.2e-04      0/  5    41 +  10      0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        9       0.095413863      2.2e-04      0/  5    41 +  10      0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       10       0.095396714      1.1e-04      0/  5    45 +  11      0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       10       0.095396691      1.1e-04      0/  5    45 +  11      0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       11       0.095390906      3.2e-05      0/  5    49 +  12      0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       11       0.095390744      3.2e-05      0/  5    49 +  12      0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       12       0.095386816      1.3e-05      2/  5    54 +  12      0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       12       0.095386724      1.3e-05      2/  5    54 +  12      0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       13       0.095385903      8.7e-06      3/  5    56 +  13      0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       13       0.095385810      8.6e-06      3/  5    56 +  13      0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       14       0.095385484      1.9e-06      3/  5    57 +  14      0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       14       0.095385430      1.9e-06      3/  5    57 +  14      0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       15       0.095385274      5.3e-07      3/  5    59 +  14      0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       15       0.095385245      5.2e-07      3/  5    59 +  14      0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       16       0.095385241      3.2e-07      3/  5    61 +  14      0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       16       0.095385219      3.2e-07      3/  5    60 +  15      0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       17       0.095385225      9.1e-08      3/  5    61 +  16      0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       17       0.095385205      6.0e-08      3/  5    61 +  16      0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       18       0.095385208      6.4e-08      3/  5    63 +  16      0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       18       0.095385200      2.1e-08      4/  5    63 +  16      0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       19       0.095385203      3.6e-08      3/  5    65 +  16      0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       19       0.095385199      1.1e-08      4/  5    64 +  16      0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       20       0.095385201      2.1e-08      4/  5    65 +  18      0:00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       20       0.095385199      8.7e-09      5/  5    64 +  17      0:00:00
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       21       0.095385200      8.7e-09      5/  5    66 +  18      0:00:00
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>** Convergence reached in 21 iterations
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>** Convergence reached in 20 iterations
                                                                                                                           
 </pre></div>
 </div>
@@ -807,8 +804,8 @@ Total MCSCF time: 00:00:02
  Transition   Energy (Ha)    Energy (eV)    Length gauge   Velocity gauge 
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
           1     0.0758269      2.06336       0.0000000      0.0000000
-          2     0.0838256      2.28101       0.0017223      0.1821877
-          3     0.0853400      2.32222       0.0014504      0.0193201
+          2     0.0838256      2.28101       0.0017040      0.2165858
+          3     0.0853400      2.32222       0.0026139      0.2034989
           4     0.1062426      2.89101       0.0000000      0.0000000
           5     0.1256908      3.42022       0.0000000      0.0000000
                                                                                                                           
@@ -817,10 +814,10 @@ Total MCSCF time: 00:00:02
  Transition   Energy (Ha)    Energy (eV)    Length gauge   Velocity gauge 
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
           1     0.0758269      2.06336      -0.0000000      0.0000000
-          2     0.0838256      2.28101      -1.2815729     16.2164151
-          3     0.0853400      2.32222       2.1945185     -16.9199162
-          4     0.1062426      2.89101       0.0000000      0.0000000
-          5     0.1256908      3.42022      -0.0000000      0.0000000
+          2     0.0838256      2.28101       1.3682297     -20.2203180
+          3     0.0853400      2.32222       0.4528262      4.5876201
+          4     0.1062426      2.89101       0.0000000     -0.0000000
+          5     0.1256908      3.42022       0.0000000     -0.0000000
                                                                                                                           
 </pre></div>
 </div>
@@ -838,7 +835,7 @@ Total MCSCF time: 00:00:02
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on class McscfDriver in module multipsi.mcscf_driver:
 
 class McscfDriver(builtins.object)
- |  McscfDriver(comm=&lt;mpi4py.MPI.Intracomm object at 0x1075b7af0&gt;, ostream=None)
+ |  McscfDriver(comm=&lt;mpi4py.MPI.Intracomm object at 0x112788350&gt;, ostream=None)
  |
  |  Converge a general MCSCF wavefunction
  |
@@ -849,7 +846,7 @@ class McscfDriver(builtins.object)
  |
  |  Methods defined here:
  |
- |  __init__(self, comm=&lt;mpi4py.MPI.Intracomm object at 0x1075b7af0&gt;, ostream=None)
+ |  __init__(self, comm=&lt;mpi4py.MPI.Intracomm object at 0x112788350&gt;, ostream=None)
  |      Initialize self.  See help(type(self)) for accurate signature.
  |
  |  compute(self, molecule, basis, orbital_space, n_states=1)
