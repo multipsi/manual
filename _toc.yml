@@ -12,7 +12,9 @@ parts:
   chapters:
   - file: docs/ci
   - file: docs/mcscf
+  - file: docs/mcpdft
   - file: docs/properties
+  - file: docs/tools
 - caption: Advanced tutorials
   chapters:
   - file: docs/active-space
